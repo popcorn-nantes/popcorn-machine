@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">Trouvez un·e développeur·e freelance à Nantes</h1>
+      <h1 class="title">{{title}}</h1>
       <h2 class="subtitle">
         <em>Popcorn : La plateforme avec ( vraiment ) 0% de commission pour tout le monde</em>
       </h2>
@@ -25,8 +25,12 @@ import { getPersons } from '@/services/content'
 export default {
   scrollToTop: false,
   data() {
+    const city = process.env.CITY ? ` à ${process.env.CITY}` : ''
+    const title = `Trouvez un·e développeur·e freelance${city}`
+
     return {
-      persons: [...getPersons()]
+      persons: [...getPersons()],
+      title,
     }
   },
   components: {
@@ -66,4 +70,3 @@ export default {
   }
 }
 </script>
-

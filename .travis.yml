@@ -11,6 +11,8 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
+    - node_modules
+    - tests/e2e/project/node_modules
 
 install:
   - npm install
@@ -18,7 +20,9 @@ install:
 before_script:
   - npm run build
   - npm run generate
+  - cd test/e2e/project
   - npm start -- --silent &
+  - cd -
 
 script:
   - npm run e2e

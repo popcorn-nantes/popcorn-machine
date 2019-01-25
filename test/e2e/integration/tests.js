@@ -3,7 +3,7 @@
 describe('Tests', () => {
   it('Visits index page', () => {
     cy.visit('/')
-    cy.contains('h1', 'Trouvez un·e développeur·e freelance à Nantes')
+    cy.contains('h1', 'Trouvez un·e développeur·e freelance')
     cy.get('#person-yann-boisselier').within(() => {
       cy.get('h2').contains('Développeur JavaScript FullStack')
       cy.get('h3').contains("10 ans d'expérience")

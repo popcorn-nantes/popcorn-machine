@@ -1,0 +1,12 @@
+{
+  "name": "popcorn-test-project",
+  "version": "1.0.0",
+  "description": "This is a e2e project to test popcorn-machine",
+  "scripts": {
+    "dev": "CITY=Fake-City popcorn"
+  },
+  "dependencies": {
+    "popcorn-machine": "../../../"
+  },
+  "license": "MIT"
+}

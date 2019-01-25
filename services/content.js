@@ -1,5 +1,5 @@
-import pages from '@/static/api/pages.json'
-import persons from '@/static/api/persons.json'
+import pages from '@api/pages.json'
+import persons from '@api/persons.json'
 
 export function getPersons() {
   return persons

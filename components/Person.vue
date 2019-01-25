@@ -18,7 +18,7 @@
           </div>
           <div class="column">
             <button class="button is-primary" @click="showModal = true">
-              <img style="width:20px; padding-right: 5px" src="/icons/envelope.svg">
+              <img style="width:20px; padding-right: 5px" src="/machine/icons/envelope.svg">
               <span>Proposer un projet</span>
             </button>
           </div>
@@ -44,7 +44,7 @@
           <p style="margin-top:2rem">
             <em>Indiquez-lui que vous l'avez trouvé·e sur Popcorn :)
               <br>
-              <img style="position:relative;top:6px;" width="40px" src="/favicon.ico">
+              <img style="position:relative;top:6px;" width="40px" src="/machine/favicon.ico">
             </em>
           </p>
         </div>

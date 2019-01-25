@@ -4,7 +4,7 @@ _Popcorn_ est une plateforme open source et (vraiment) sans commission qui aide 
 
 Les objectifs de _Popcorn_ pour les développeurs freelances :
 
-- 📈 Devenir un canal pour trouver des affaires à Nantes sans commission ni intermédiaire.
+- 📈 Devenir un canal pour trouver des affaires sans commission ni intermédiaire.
 - 📗 Open source : on maîtrise les fonctionnalités de la plateforme, tel que les résultats de recherche, les informations affichées par nos profils etc
 - 💬 Faire circuler les tuyaux boulot entre freelances via le tchat.
 
