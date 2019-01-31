@@ -1,6 +1,6 @@
 {
   "name": "popcorn-machine",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "popcorn machine",
   "bin": {
     "popcorn": "./cli.js"
