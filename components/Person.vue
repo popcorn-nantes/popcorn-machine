@@ -28,7 +28,6 @@
       </div>
     </div>
 
-    <!-- "v-if" removes this contacts informations from the DOM -->
     <div v-if="showModal" class="modal" :class="{'is-active': showModal}">
       <div class="modal-background" @click="showModal = false"></div>
       <div class="modal-content has-text-centered">
@@ -42,11 +41,9 @@
             class="is-size-5"
           >{{person.telephone}}</p>
           <p style="margin-top:2rem">
-            <em>Indiquez-lui que vous l'avez trouvé·e sur Popcorn :)
-              <br>
-              <img style="position:relative;top:6px;" width="40px" src="/machine/favicon.ico">
-            </em>
+            <em>Indiquez-lui que vous l'avez trouvé·e sur Popcorn :)</em>
           </p>
+          <div style="font-size:3rem">🍿</div>
         </div>
         <!-- Any other Bulma elements you want -->
       </div>
