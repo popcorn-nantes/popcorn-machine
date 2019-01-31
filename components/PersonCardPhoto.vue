@@ -15,18 +15,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-  methods: {
-    style: url => {
-      const imageUrl = url ? url : '/images/placeholder-peluche.png'
-      return {
-        height: '300px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${imageUrl})`,
-        backgroundPosition: 'center'
-      }
-    }
   }
 }
 </script>
