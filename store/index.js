@@ -1,14 +1,10 @@
-import Vuex from 'vuex'
+export const state = () => ({
+  // le texte de la recherche en cours
+  currentSearch: ''
+})
 
-export default () =>
-  new Vuex.Store({
-    state: {
-      // le texte de la recherche en cours
-      currentSearch: ''
-    },
-    mutations: {
-      setCurrentSearch(state, currentSearch) {
-        state.currentSearch = currentSearch
-      }
-    }
-  })
+export const mutations = {
+  setCurrentSearch(state, currentSearch) {
+    state.currentSearch = currentSearch
+  }
+}
