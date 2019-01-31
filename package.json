@@ -6,10 +6,6 @@
     "popcorn": "./cli.js"
   },
   "scripts": {
-    "dev": "./cli.js",
-    "build": "./cli.js build",
-    "start": "./cli.js start",
-    "generate": "./cli.js generate",
     "e2e": "cypress run",
     "e2e:open": "cypress open"
   },
