@@ -15,7 +15,9 @@ const {
   POPCORN_DIR,
   POPCORN_DIR_PUBLIC_PATH,
   POPCORN_DIR_CONTENT_PATH,
-  POPCORN_DIR_API_PATH
+  POPCORN_DIR_DIST_PATH,
+  POPCORN_DIR_API_PATH,
+  POPCORN_DIR_PUBLIC_NAME
 } = process.env
 
 module.exports = {
@@ -71,7 +73,7 @@ module.exports = {
     compilers: ['compilers/persons.js', 'compilers/pages.js']
   },
   generate: {
-    dir: path.resolve(POPCORN_DIR, 'dist')
+    dir: POPCORN_DIR_DIST_PATH
   },
   build: {
     extend(config) {
@@ -80,7 +82,9 @@ module.exports = {
     }
   },
   serverMiddleware: [
-    // We can create custom instances too
-    { path: '/public', handler: serveStatic(POPCORN_DIR_PUBLIC_PATH) }
+    {
+      path: '/' + POPCORN_DIR_PUBLIC_NAME,
+      handler: serveStatic(POPCORN_DIR_PUBLIC_PATH)
+    }
   ]
 }
