@@ -31,4 +31,13 @@ process.env.POPCORN_DIR_API_PATH = path.resolve(
 
 process.chdir(__dirname)
 
-cli.run()
+cli
+  .run()
+  .catch(error => {
+    require('consola').fatal(error)
+    process.exit(2)
+  })
+  .then(r => {
+    console.log('📚 La génération des pages est terminée !')
+    process.exit(0)
+  })
