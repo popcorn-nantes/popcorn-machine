@@ -38,6 +38,10 @@ cli
     process.exit(2)
   })
   .then(r => {
-    console.log('📚 La génération des pages est terminée !')
-    process.exit(0)
+    if (process.argv[2]) {
+      if (process.argv[2] === 'generate') {
+        console.log('📚 La génération des pages est terminée !')
+      }
+      process.exit(0)
+    }
   })
