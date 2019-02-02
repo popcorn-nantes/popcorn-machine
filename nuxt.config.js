@@ -1,16 +1,3 @@
-require('dotenv').config()
-const path = require('path')
-const serveStatic = require('serve-static')
-const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
-
-// les informations par défaut pour les metatags à destination des réseaux sociaux
-const city = process.env.CITY ? ` à ${process.env.CITY}` : ''
-const ogTitle = `Popcorn : trouvez un·e développeur·e freelance${city}`
-const ogDescription =
-  'La plateforme avec (vraiment) 0% de commission pour tout le monde'
-const ogUrl = process.env.POPCORN_BASE_URL
-const ogImage = `${process.env.POPCORN_BASE_URL}/images/popcorn.jpg`
-
 const {
   POPCORN_DIR,
   POPCORN_DIR_PUBLIC_PATH,
@@ -19,11 +6,23 @@ const {
   POPCORN_DIR_API_PATH,
   POPCORN_DIR_PUBLIC_NAME
 } = process.env
+const path = require('path')
+const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
+const serveStatic = require('serve-static')
+require('dotenv').config({ path: POPCORN_DIR + '/.env' })
+
+// les informations par défaut pour les metatags à destination des réseaux sociaux
+const city = process.env.POPCORN_CITY ? ` à ${process.env.POPCORN_CITY}` : ''
+const ogTitle = `Popcorn : trouvez un·e développeur·e freelance${city}`
+const ogDescription =
+  'La plateforme avec (vraiment) 0% de commission pour tout le monde'
+const ogUrl = process.env.POPCORN_BASE_URL
+const ogImage = `${process.env.POPCORN_BASE_URL}/images/popcorn.jpg`
 
 module.exports = {
   buildDir: path.resolve(POPCORN_DIR, '.nuxt'),
   env: {
-    CITY: process.env.CITY,
+    POPCORN_CITY: process.env.CITY,
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
     POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK
   },
@@ -66,7 +65,11 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/dotenv', 'nuxt-gustave', '~/modules/copyPublic.js'],
+  modules: [
+    ['@nuxtjs/dotenv', { path: POPCORN_DIR }],
+    'nuxt-gustave',
+    '~/modules/copyPublic.js'
+  ],
   gustave: {
     JSONDirectory: POPCORN_DIR_API_PATH,
     contentDirectory: POPCORN_DIR_CONTENT_PATH,
