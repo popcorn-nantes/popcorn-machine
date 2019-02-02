@@ -1,7 +1,7 @@
 <template>
   <div class="card-image">
     <div class="photo-container">
-      <img class="photo" :src="'/public' + person.photo">
+      <img class="photo" v-lazy="'/public' + person.photo">
       <div class="name name-overlay"></div>
     </div>
     <p class="name">{{person.prenom}} {{person.nom}}</p>
