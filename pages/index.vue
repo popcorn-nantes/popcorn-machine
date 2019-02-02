@@ -25,12 +25,13 @@ import { getPersons } from '@/services/content'
 export default {
   scrollToTop: false,
   data() {
-    const city = process.env.CITY ? ` à ${process.env.CITY}` : ''
+    const city = process.env.POPCORN_CITY
+      ? ` à ${process.env.POPCORN_CITY}`
+      : ''
     const title = `Trouvez un·e développeur·e freelance${city}`
-
     return {
       persons: [...getPersons()],
-      title,
+      title
     }
   },
   components: {
