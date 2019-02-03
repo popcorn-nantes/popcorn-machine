@@ -10,7 +10,21 @@ Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustav
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
 
-## Installation
+## Installation (WIP)
+
+Créer un dossier avec l'architecture suivante:
+
+```js
+📁 content // contiendra les fichiers
+  📁 pages
+  📁 persons
+📁 public
+  📁 images
+.env
+.gitignore
+```
+
+puis:
 
 ```sh
 npm install popcorn-machine
@@ -22,7 +36,7 @@ démarrer le serveur de dev
 npm run dev
 ```
 
-Générer le site en html
+Générer le site en html:
 
 ```sh
 npm run generate
