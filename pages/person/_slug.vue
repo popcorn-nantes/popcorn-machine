@@ -26,7 +26,7 @@ export default {
     const title = `Profil de ${this.person.prenom} ${
       this.person.nom
     }, freelance ${this.person.technologies.join(', ')}`
-    const description = process.env.popcorn.ogDefaultDescription,
+    const description = process.env.popcorn.ogDefaultDescription
     const image = `${process.env.POPCORN_BASE_URL}${this.person.photo}`
     const url = `${process.env.POPCORN_BASE_URL}${this.$route.path}`
     return {

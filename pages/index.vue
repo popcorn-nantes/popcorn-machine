@@ -34,7 +34,9 @@ export default {
     }
   },
   computed: {
-    popcorn: () => process.env.popcorn
+    popcorn: () => {
+      return process.env.popcorn
+    }
   },
   methods: {
     onInput(value) {
