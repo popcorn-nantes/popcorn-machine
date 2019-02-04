@@ -8,7 +8,7 @@
     "generate": "CITY=Fake-City popcorn generate"
   },
   "dependencies": {
-    "popcorn-machine": "../../../"
+    "popcorn-machine": "file://../../../"
   },
   "license": "MIT"
 }
