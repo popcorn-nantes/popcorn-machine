@@ -26,7 +26,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'description',
-        content: popcorn.ogDescription
+        content: popcorn.ogDefaultDescription
       },
       ...generateSocialShareHeadersMeta({
         title: popcorn.ogDefaultTitle,
