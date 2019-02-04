@@ -15,7 +15,7 @@ install:
   - cd tests/e2e/project && npm install
   - cd -
 
-before_script:
+script:
   - cd test/e2e/project
   # this is not necessary for the e2e test but we make sur build and generate works
   - npm run build
@@ -23,6 +23,4 @@ before_script:
   # this is the dev version that is tested
   - npm run dev -- --silent &
   - cd -
-
-script:
   - npm run e2e
