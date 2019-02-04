@@ -1,9 +1,9 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">{{popcornConfig.title}}</h1>
+      <h1 class="title">{{popcorn.title}}</h1>
       <h2 class="subtitle">
-        <em>{{popcornConfig.slogan}}</em>
+        <em>{{popcorn.subtitle}}</em>
       </h2>
     </div>
     <div class="container">
@@ -21,7 +21,6 @@
 import Persons from '@/components/Persons'
 import PersonsSearchForm from '@/components/PersonsSearchForm'
 import { getPersons } from '@/services/content'
-import { title, slogan } from '@/popcorn.config.js'
 
 export default {
   scrollToTop: false,
@@ -35,9 +34,7 @@ export default {
     }
   },
   computed: {
-    popcornConfig() {
-      return popcornConfig
-    }
+    popcorn: () => process.env.popcorn
   },
   methods: {
     onInput(value) {

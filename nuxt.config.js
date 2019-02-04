@@ -3,12 +3,12 @@ require('dotenv').config({ path: POPCORN_DIR + '/.env' })
 const path = require('path')
 const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
 const serveStatic = require('serve-static')
-const popcornConfig = require('./popcorn.config')
+const popcorn = require('./popcorn.config')
 
 module.exports = {
-  buildDir: POPCORN_DIR + '/' + popcornConfig.dir_dist,
+  buildDir: POPCORN_DIR + '/' + popcorn.dir_build,
   env: {
-    POPCORN_LOCATION: popcornConfig.location,
+    popcorn: popcorn,
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
     POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK
   },
@@ -26,13 +26,13 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'description',
-        content: popcornConfig.ogDescription
+        content: popcorn.ogDescription
       },
       ...generateSocialShareHeadersMeta({
-        title: popcornConfig.title,
-        description: popcornConfig.slogan,
-        image: popcornConfig.ogImage,
-        url: popcornConfig.ogUrl
+        title: popcorn.ogDefaultTitle,
+        description: popcorn.ogDefaultDescription,
+        image: popcorn.ogDefaultImage,
+        url: popcorn.ogDefaultUrl
       })
     ],
     link: [
@@ -57,26 +57,23 @@ module.exports = {
     '~/modules/copyPublic.js'
   ],
   gustave: {
-    JSONDirectory: path.resolve(POPCORN_DIR, popcornConfig.dir_api),
-    contentDirectory: path.resolve(POPCORN_DIR, popcornConfig.dir_content),
+    JSONDirectory: path.resolve(POPCORN_DIR, popcorn.dir_api),
+    contentDirectory: path.resolve(POPCORN_DIR, popcorn.dir_content),
     compilers: ['compilers/persons.js', 'compilers/pages.js']
   },
   generate: {
-    dir: path.resolve(POPCORN_DIR, popcornConfig.dir_dist)
+    dir: path.resolve(POPCORN_DIR, popcorn.dir_dist)
   },
   build: {
     extend(config) {
       // override and set some aliases
-      config.resolve.alias['@api'] = path.resolve(
-        POPCORN_DIR,
-        popcornConfig.dir_api
-      )
+      config.resolve.alias['@api'] = path.resolve(POPCORN_DIR, popcorn.dir_api)
     }
   },
   serverMiddleware: [
     {
-      path: '/' + popcornConfig.dir_public,
-      handler: serveStatic(path.resolve(POPCORN_DIR, popcornConfig.dir_public))
+      path: '/' + popcorn.dir_public,
+      handler: serveStatic(path.resolve(POPCORN_DIR, popcorn.dir_public))
     }
   ]
 }

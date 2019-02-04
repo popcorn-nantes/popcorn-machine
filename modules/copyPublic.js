@@ -1,4 +1,5 @@
 const fs = require('fs-extra')
+const path = require('path')
 const consola = require('consola')
 const { POPCORN_DIR } = process.env
 const popcornConfig = require('../popcorn.config')
