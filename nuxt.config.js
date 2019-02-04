@@ -8,7 +8,7 @@ const popcornConfig = require('./popcorn.config')
 module.exports = {
   buildDir: POPCORN_DIR + '/' + popcornConfig.dir_dist,
   env: {
-    POPCORN_LOCATION: process.env.POPCORN_LOCATION,
+    POPCORN_LOCATION: popcornConfig.location,
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
     POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK
   },
