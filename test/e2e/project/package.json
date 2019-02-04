@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is a e2e project to test popcorn-machine",
   "scripts": {
-    "dev": "CITY=Fake-City popcorn"
+    "dev": "CITY=Fake-City popcorn",
+    "build": "CITY=Fake-City popcorn build",
+    "generate": "CITY=Fake-City popcorn generate"
   },
   "dependencies": {
     "popcorn-machine": "../../../"
