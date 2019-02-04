@@ -2,13 +2,10 @@
   "name": "popcorn-test-project",
   "version": "1.0.0",
   "description": "This is a e2e project to test popcorn-machine",
+  "license": "MIT",
   "scripts": {
-    "dev": "CITY=Fake-City popcorn",
-    "build": "CITY=Fake-City popcorn build",
-    "generate": "CITY=Fake-City popcorn generate"
-  },
-  "dependencies": {
-    "popcorn-machine": "file://../../../"
-  },
-  "license": "MIT"
+    "dev": "CITY=Fake-City ../../../cli.js",
+    "build": "CITY=Fake-City ../../../cli.js build",
+    "generate": "CITY=Fake-City ../../../cli.js generate"
+  }
 }
