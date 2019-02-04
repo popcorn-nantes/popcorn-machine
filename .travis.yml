@@ -21,6 +21,6 @@ script:
   - npm run build
   - npm run generate
   # this is the dev version that is tested
-  - npm run dev -- --silent &
+  - npm run dev &
   - cd -
   - npm run e2e
