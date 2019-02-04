@@ -8,7 +8,7 @@ const title = `Popcorn : trouvez un·e développeur·e freelance ${
 const subtitle =
   'La plateforme avec (vraiment) 0% de commission pour tout le monde'
 
-const slogan = `Trouvez un développeur freelance à Nantes à ${
+const slogan = `Trouvez un développeur freelance ${
   config.location
 } sans intermédiaire et sans frais.`
 
