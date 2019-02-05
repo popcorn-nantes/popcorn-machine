@@ -26,7 +26,7 @@ export default {
     const title = `Profil de ${this.person.prenom} ${
       this.person.nom
     }, freelance ${this.person.technologies.join(', ')}`
-    const city = process.env.CITY ? ` à ${process.env.CITY}` : ''
+    const city = process.env.POPCORN_CITY ? ` à ${process.env.POPCORN_CITY}` : ''
     const description = `Popcorn : trouvez un développeur freelance${city} avec (vraiment) 0% de commission pour tout le monde`
     const image = `${process.env.POPCORN_BASE_URL}${this.person.photo}`
     const url = `${process.env.POPCORN_BASE_URL}${this.$route.path}`
