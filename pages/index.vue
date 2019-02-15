@@ -1,9 +1,9 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">{{popcorn.title}}</h1>
+      <h1 class="title">{{POPCORN_TITLE}}</h1>
       <h2 class="subtitle">
-        <em>{{popcorn.subtitle}}</em>
+        <em>{{POPCORN_SUBTITLE}}</em>
       </h2>
     </div>
     <div class="container">
@@ -34,9 +34,8 @@ export default {
     }
   },
   computed: {
-    popcorn: () => {
-      return process.env.popcorn
-    }
+    POPCORN_TITLE: () => process.env.POPCORN_TITLE,
+    POPCORN_SUBTITLE: () => process.env.POPCORN_SUBTITLE
   },
   methods: {
     onInput(value) {

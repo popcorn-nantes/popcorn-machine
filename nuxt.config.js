@@ -2,15 +2,18 @@ const { POPCORN_DIR } = process.env
 require('dotenv').config({ path: POPCORN_DIR + '/.env' })
 const path = require('path')
 const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
+const popcorn = require('./popcorn.config.js')
 const serveStatic = require('serve-static')
-const popcorn = require('./popcorn.config')
 
 module.exports = {
   buildDir: POPCORN_DIR + '/' + popcorn.dir_build,
   env: {
-    popcorn: popcorn,
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
-    POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK
+    POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK,
+    POPCORN_LOCATION: popcorn.location,
+    POPCORN_SLOGAN: popcorn.slogan,
+    POPCORN_TITLE: popcorn.title,
+    POPCORN_SUBTITLE: popcorn.subtitle
   },
   mode: 'universal',
   /*
