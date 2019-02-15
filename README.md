@@ -22,6 +22,15 @@ Créer un dossier avec l'architecture suivante:
   📁 images
 .env
 .gitignore
+popcorn.config.js
+```
+
+📝 **popcorn.config.js**
+
+```js
+module.exports = {
+  location: 'à Nantes'
+}
 ```
 
 puis:
