@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const cli = require('@nuxt/cli')
-const path = require('path')
 
 const { PWD } = process.env
 

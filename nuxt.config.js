@@ -6,16 +6,22 @@ const popcorn = require('./popcorn.config.js')
 const serveStatic = require('serve-static')
 
 module.exports = {
+  mode: 'universal',
   buildDir: POPCORN_DIR + '/' + popcorn.dir_build,
+  // those variables are accessible both from server and client JavaScript.
   env: {
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
     POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK,
     POPCORN_LOCATION: popcorn.location,
     POPCORN_SLOGAN: popcorn.slogan,
     POPCORN_TITLE: popcorn.title,
-    POPCORN_SUBTITLE: popcorn.subtitle
+    POPCORN_SUBTITLE: popcorn.subtitle,
+    POPCORN_OG_DEFAULT_TITLE: popcorn.ogDefaultTitle,
+    POPCORN_OG_DEFAULT_DESCRIPTION: popcorn.ogDefaultDescription,
+    POPCORN_OG_DEFAULT_URL: process.env.POPCORN_BASE_URL,
+    POPCORN_OG_DEFAULT_IMAGE:
+      process.env.POPCORN_BASE_URL + '/images/popcorn.jpg'
   },
-  mode: 'universal',
   /*
    ** Headers of the page
    */
