@@ -1,6 +1,6 @@
 {
   "name": "popcorn-machine",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "popcorn machine",
   "bin": {
     "popcorn": "./cli.js"
@@ -15,6 +15,7 @@
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "esm": "^3.0.84",
+    "md5": "^2.2.1",
     "node-fs-extra": "^0.8.2",
     "nodemon": "^1.18.7",
     "nuxt": "^2.3.4",
