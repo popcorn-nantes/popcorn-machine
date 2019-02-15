@@ -32,6 +32,10 @@ describe('Tests', () => {
 
   it('should use the gravatar avatar', () => {
     cy.visit('/person/fabien-juif')
-    cy.get('img.photo').should('have.attr', 'data-src', 'https://www.gravatar.com/avatar/963e047fe4332aaca53a6e5c6d275a1f?s=500')
+    cy.get('img.photo').should(
+      'have.attr',
+      'data-src',
+      'https://www.gravatar.com/avatar/963e047fe4332aaca53a6e5c6d275a1f?s=500'
+    )
   })
 })
