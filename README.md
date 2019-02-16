@@ -1,6 +1,31 @@
 # POPCORN-MACHINE 🍿
 
-La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://github.com/popcorn-nantes/popcorn-nantes).
+La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://popcorn-nantes.github.io/).
+
+## FONCTIONNALITES
+
+- JAMStack : le site est généré statiquement avec les avantages habituels: facile à héberger gratuitement, déployable sur github ou Netlify, déploiements atomiques etc ( https://jamstack.wtf/ )
+- SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
+- Gestion des profils et des pages statiques
+- Recherche instantanée sur les compétences et mot-clefs du profils
+- Support Gravatar pour les photos du profil
+- Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
+
+## PHILOSOPHIE TECHNIQUE :  0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
+
+Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique pourrait être:
+
+> Dis moi ce dont tu as besoin, je te dirai comment t'en passer.
+
+L'idée expérimentée par _Popcorn_ est d'avoir un site aussi léger techniquement que possible, sans serveur et base de données **afin qu'il ne requiert quasiment aucune maintenance et intervention de notre part ni aucun frais, parce que :**
+
+- On est déjà tous "sous l'eau", ce site ne doit pas être une charge de travail supplémentaire.
+- On ne veut pas que le site reste 48 heures en rade parce qu'il ya un truc qui déconne et que tout le monde est trop occupé pour intervenir dessus.
+- On ne veut pas qu'au fil du temps une personne devienne "responsable" du site, qu'elle soit la seule à piger comment tout fonctionne et qu'elle parte à Barcelone ou quitte _Popcorn_ en laissant aux autres un truc compliqué qu'ils et elles ne maitrisent pas
+- On veut bien être hébergé pour 0 euros chez Github ^^
+- On veut bien un site qui soit capable de supporter un fort pic de charge sans broncher : évitons le cas du site qui tombe pile au moment où un article de presse le mentionne 😅
+- On veut bien un moteur de recherche super-rapide et un site qui s'affiche super vite
+- On veut bien que des gens puissent tout simplement forker ce dépôt pour créer leur propre annuaire 💚
 
 ## DOCUMENTATION TECHNIQUE
 
@@ -12,31 +37,12 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 
 ## Installation (WIP)
 
-Créer un dossier avec l'architecture suivante:
+Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter 
 
-```js
-📁 content // contiendra les fichiers
-  📁 pages
-  📁 persons
-📁 public
-  📁 images
-.env
-.gitignore
-popcorn.config.js
-```
-
-📝 **popcorn.config.js**
-
-```js
-module.exports = {
-  location: 'à Nantes'
-}
-```
-
-puis:
+Puis:
 
 ```sh
-npm install popcorn-machine
+npm install
 ```
 
 démarrer le serveur de dev
