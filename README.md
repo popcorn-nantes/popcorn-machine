@@ -1,6 +1,6 @@
 # POPCORN-MACHINE 🍿
 
-La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://github.com/popcorn-nantes/popcorn-nantes).
+La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://popcorn-nantes.github.io/).
 
 ## FONCTIONNALITES
 
