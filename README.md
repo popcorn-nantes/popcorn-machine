@@ -15,7 +15,7 @@ La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [
 
 Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique de Popcorn pourrait être:
 
-> Dis moi ce dont tu as besoin, je te dirais comment s'en passer.
+> Dis moi ce dont tu as besoin, je te dirai comment t'en passer.
 
 L'idée expérimentée par _Popcorn_ est d'avoir un site aussi léger techniquement que possible, sans serveur et base de données **afin qu'il ne requiert quasiment aucune maintenance et intervention de notre part ni aucun frais, parce que :**
 
