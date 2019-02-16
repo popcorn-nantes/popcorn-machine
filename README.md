@@ -13,7 +13,7 @@ La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [
 
 ## PHILOSOPHIE TECHNIQUE :  0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
 
-Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique de Popcorn pourrait être:
+Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique pourrait être:
 
 > Dis moi ce dont tu as besoin, je te dirai comment t'en passer.
 
