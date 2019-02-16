@@ -2,6 +2,15 @@
 
 La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://github.com/popcorn-nantes/popcorn-nantes).
 
+## FONCTIONNALITES
+
+- JAMStack : le site est généré statiquement avec les avantages habituels: facile à héberger gratuitement, déployable sur github ou Netlify, déploiements atomiques etc ( https://jamstack.wtf/ )
+- SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
+- Gestion des profils et des pages statiques
+- Recherche instantanée sur les compétences et mot-clefs du profils
+- Support Gravatar pour les photos du profil
+- Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
+
 ## DOCUMENTATION TECHNIQUE
 
 `popcorn-machine` est une application [Nuxt.js](https://github.com/nuxt/nuxt.js) qui permet de générer un site statique en _html_ à partir de fichiers markdowns pour créer les profils et contenus du sites.
