@@ -3,11 +3,11 @@ const { POPCORN_BASE_URL, POPCORN_DIR } = process.env
 const path = require('path')
 let config = require(POPCORN_DIR + '/popcorn.config')
 
-const homepageTitle = `Popcorn : trouvez un·e développeur·e freelance ${
+const title = `Popcorn : trouvez un·e développeur·e freelance ${
   config.location
 }`
 
-const homepageSubtitle = 'La plateforme avec (vraiment) 0% de commission'
+const subtitle = 'La plateforme avec (vraiment) 0% de commission'
 
 const slogan = `Trouvez un développeur freelance ${
   config.location
@@ -17,12 +17,12 @@ module.exports = {
   ...config,
   // Les variables ci-dessous ne sont pas surchargeables par une
   // instance de popcorn
-  homepageTitle,
-  homepageSubtitle,
+  title,
+  subtitle,
   slogan,
 
   // Valeurs par défaut pour les balises metas de partages pour les réseaux sociaux
-  ogDefaultTitle: homepageTitle,
+  ogDefaultTitle: title,
   ogDefaultDescription: slogan,
   ogDefaultUrl: POPCORN_BASE_URL,
   ogDefaultImage: POPCORN_BASE_URL + '/images/popcorn.jpg',

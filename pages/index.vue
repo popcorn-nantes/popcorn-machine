@@ -34,8 +34,8 @@ export default {
     }
   },
   computed: {
-    title: () => process.env.POPCORN_HOMEPAGE_TITLE,
-    subtitle: () => process.env.POPCORN_HOMEPAGE_SUBTITLE
+    title: () => process.env.POPCORN_TITLE,
+    subtitle: () => process.env.POPCORN_SUBTITLE
   },
   methods: {
     onInput(value) {
