@@ -1,32 +1,27 @@
-const {
-  POPCORN_DIR,
-  POPCORN_DIR_PUBLIC_PATH,
-  POPCORN_DIR_CONTENT_PATH,
-  POPCORN_DIR_DIST_PATH,
-  POPCORN_DIR_API_PATH,
-  POPCORN_DIR_PUBLIC_NAME
-} = process.env
+const { POPCORN_DIR } = process.env
+require('dotenv').config({ path: POPCORN_DIR + '/.env' })
 const path = require('path')
 const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
+const popcorn = require('./popcorn.config.js')
 const serveStatic = require('serve-static')
-require('dotenv').config({ path: POPCORN_DIR + '/.env' })
-
-// les informations par défaut pour les metatags à destination des réseaux sociaux
-const city = process.env.POPCORN_CITY ? ` à ${process.env.POPCORN_CITY}` : ''
-const ogTitle = `Popcorn : trouvez un·e développeur·e freelance${city}`
-const ogDescription =
-  'La plateforme avec (vraiment) 0% de commission pour tout le monde'
-const ogUrl = process.env.POPCORN_BASE_URL
-const ogImage = `${process.env.POPCORN_BASE_URL}/images/popcorn.jpg`
 
 module.exports = {
-  buildDir: path.resolve(POPCORN_DIR, '.nuxt'),
-  env: {
-    POPCORN_CITY: process.env.CITY,
-    POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
-    POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK
-  },
   mode: 'universal',
+  buildDir: POPCORN_DIR + '/' + popcorn.dir_build,
+  // those variables are accessible both from server and client JavaScript.
+  env: {
+    POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
+    POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK,
+    POPCORN_LOCATION: popcorn.location,
+    POPCORN_SLOGAN: popcorn.slogan,
+    POPCORN_TITLE: popcorn.title,
+    POPCORN_SUBTITLE: popcorn.subtitle,
+    POPCORN_OG_DEFAULT_TITLE: popcorn.ogDefaultTitle,
+    POPCORN_OG_DEFAULT_DESCRIPTION: popcorn.ogDefaultDescription,
+    POPCORN_OG_DEFAULT_URL: process.env.POPCORN_BASE_URL,
+    POPCORN_OG_DEFAULT_IMAGE:
+      process.env.POPCORN_BASE_URL + '/images/popcorn.jpg'
+  },
   /*
    ** Headers of the page
    */
@@ -40,13 +35,13 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'description',
-        content: ogDescription
+        content: popcorn.ogDefaultDescription
       },
       ...generateSocialShareHeadersMeta({
-        title: ogTitle,
-        description: ogDescription,
-        image: ogImage,
-        url: ogUrl
+        title: popcorn.ogDefaultTitle,
+        description: popcorn.ogDefaultDescription,
+        image: popcorn.ogDefaultImage,
+        url: popcorn.ogDefaultUrl
       })
     ],
     link: [
@@ -71,23 +66,23 @@ module.exports = {
     '~/modules/copyPublic.js'
   ],
   gustave: {
-    JSONDirectory: POPCORN_DIR_API_PATH,
-    contentDirectory: POPCORN_DIR_CONTENT_PATH,
+    JSONDirectory: path.resolve(POPCORN_DIR, popcorn.dir_api),
+    contentDirectory: path.resolve(POPCORN_DIR, popcorn.dir_content),
     compilers: ['compilers/persons.js', 'compilers/pages.js']
   },
   generate: {
-    dir: POPCORN_DIR_DIST_PATH
+    dir: path.resolve(POPCORN_DIR, popcorn.dir_dist)
   },
   build: {
     extend(config) {
       // override and set some aliases
-      config.resolve.alias['@api'] = POPCORN_DIR_API_PATH
+      config.resolve.alias['@api'] = path.resolve(POPCORN_DIR, popcorn.dir_api)
     }
   },
   serverMiddleware: [
     {
-      path: '/' + POPCORN_DIR_PUBLIC_NAME,
-      handler: serveStatic(POPCORN_DIR_PUBLIC_PATH)
+      path: '/' + popcorn.dir_public,
+      handler: serveStatic(path.resolve(POPCORN_DIR, popcorn.dir_public))
     }
   ]
 }

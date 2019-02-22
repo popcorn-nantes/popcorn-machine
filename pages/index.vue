@@ -1,9 +1,9 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">{{title}}</h1>
+      <h1 class="title">{{POPCORN_TITLE}}</h1>
       <h2 class="subtitle">
-        <em>Popcorn : La plateforme avec ( vraiment ) 0% de commission pour tout le monde</em>
+        <em>{{POPCORN_SUBTITLE}}</em>
       </h2>
     </div>
     <div class="container">
@@ -24,19 +24,18 @@ import { getPersons } from '@/services/content'
 
 export default {
   scrollToTop: false,
-  data() {
-    const city = process.env.POPCORN_CITY
-      ? ` à ${process.env.POPCORN_CITY}`
-      : ''
-    const title = `Trouvez un·e développeur·e freelance${city}`
-    return {
-      persons: [...getPersons()],
-      title
-    }
-  },
   components: {
     Persons,
     PersonsSearchForm
+  },
+  data() {
+    return {
+      persons: [...getPersons()]
+    }
+  },
+  computed: {
+    POPCORN_TITLE: () => process.env.POPCORN_TITLE,
+    POPCORN_SUBTITLE: () => process.env.POPCORN_SUBTITLE
   },
   methods: {
     onInput(value) {

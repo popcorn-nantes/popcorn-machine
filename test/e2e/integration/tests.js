@@ -3,7 +3,7 @@
 describe('Tests', () => {
   it('Visits index page', () => {
     cy.visit('/')
-    cy.contains('h1', 'Trouvez un·e développeur·e freelance')
+    cy.contains('h1', 'Popcorn : trouvez un·e développeur·e freelance à Nantes')
     cy.get('#person-yann-boisselier').within(() => {
       cy.get('h2').contains('Développeur JavaScript FullStack')
       cy.get('h3').contains("10 ans d'expérience")
@@ -32,6 +32,10 @@ describe('Tests', () => {
 
   it('should use the gravatar avatar', () => {
     cy.visit('/person/fabien-juif')
-    cy.get('img.photo').should('have.attr', 'data-src', 'https://www.gravatar.com/avatar/963e047fe4332aaca53a6e5c6d275a1f?s=500')
+    cy.get('img.photo').should(
+      'have.attr',
+      'data-src',
+      'https://www.gravatar.com/avatar/963e047fe4332aaca53a6e5c6d275a1f?s=500'
+    )
   })
 })

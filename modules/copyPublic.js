@@ -1,11 +1,8 @@
 const fs = require('fs-extra')
+const path = require('path')
 const consola = require('consola')
-
-const {
-  POPCORN_DIR_PUBLIC_PATH,
-  POPCORN_DIR_DIST_PATH,
-  POPCORN_DIR_PUBLIC_NAME
-} = process.env
+const { POPCORN_DIR } = process.env
+const popcornConfig = require('../popcorn.config')
 
 /**
  * Copier le dossier "public" de la ville dans "static/public"
@@ -20,8 +17,11 @@ export default function copyPublic() {
 }
 
 function copyPublicToDist() {
-  const pathA = POPCORN_DIR_PUBLIC_PATH
-  const pathB = POPCORN_DIR_DIST_PATH + '/' + POPCORN_DIR_PUBLIC_NAME
+  const pathA = path.resolve(POPCORN_DIR, popcornConfig.dir_public)
+  const pathB = path.resolve(
+    POPCORN_DIR,
+    popcornConfig.dir_dist + '/' + popcornConfig.dir_public
+  )
   return fs
     .copy(pathA, pathB)
     .then(() => consola.success(`📂 Dossier ${pathA} copié vers ${pathB}`))
