@@ -14,7 +14,7 @@ process.chdir(__dirname)
 const runCli = argv => cli.run(argv)
 const run = async () => {
   const argv = process.argv.slice(2)
-  const [command] = argv
+  const [command = 'dev'] = argv
   if (command === 'start') {
     await runCli(['build', ...argv.slice(1)])
   }
@@ -25,7 +25,7 @@ const run = async () => {
     console.log('📚 La génération des pages est terminée !')
   }
 
-  if (command !== 'start') {
+  if (!['start', 'dev'].includes(command)) {
     process.exit(0)
   }
 }
