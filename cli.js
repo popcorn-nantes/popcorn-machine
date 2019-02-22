@@ -11,17 +11,27 @@ process.env.POPCORN_MACHINE_DIR = __dirname
 
 process.chdir(__dirname)
 
-cli
-  .run()
+const runCli = argv => cli.run(argv)
+const run = async () => {
+  const argv = process.argv.slice(2)
+  const [command] = argv
+  if (command === 'start') {
+    await runCli(['build', ...argv.slice(1)])
+  }
+
+  await runCli(argv)
+
+  if (command === 'generate') {
+    console.log('📚 La génération des pages est terminée !')
+  }
+
+  if (command !== 'start') {
+    process.exit(0)
+  }
+}
+
+run()
   .catch(error => {
     require('consola').fatal(error)
     process.exit(2)
-  })
-  .then(r => {
-    if (process.argv[2]) {
-      if (process.argv[2] === 'generate') {
-        console.log('📚 La génération des pages est terminée !')
-      }
-      process.exit(0)
-    }
   })
