@@ -4,7 +4,7 @@ const consola = require('consola')
 const popcornConfig = require('../popcorn.config')
 
 /**
- * Copier le dossier "public" de la location vers "dist/public"
+ * Copier le dossier "public" de l'instance popcorn vers "dist/public"
  */
 export default function copyPublic() {
   this.nuxt.hook('generate:distCopied', async ({ compiler }) => {
