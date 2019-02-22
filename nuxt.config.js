@@ -18,8 +18,8 @@ module.exports = {
     POPCORN_SUBTITLE: popcorn.subtitle,
     POPCORN_OG_DEFAULT_TITLE: popcorn.ogDefaultTitle,
     POPCORN_OG_DEFAULT_DESCRIPTION: popcorn.ogDefaultDescription,
-    POPCORN_OG_DEFAULT_URL: process.env.ogDefaultUrl,
-    POPCORN_OG_DEFAULT_IMAGE: process.env.ogDefaultImage
+    POPCORN_OG_DEFAULT_URL: popcorn.ogDefaultUrl,
+    POPCORN_OG_DEFAULT_IMAGE: popcorn.ogDefaultImage
   },
   /*
    ** Headers of the page
