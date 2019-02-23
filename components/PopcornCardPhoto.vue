@@ -1,7 +1,7 @@
 <template>
   <div class="card-image">
     <div class="photo-container">
-      <img class="photo" :src="popcorn.image">
+      <img class="photo" v-lazy="popcorn.image">
       <div class="name name-overlay"></div>
     </div>
     <h2 class="name title is-3">{{popcorn.name}}</h2>
