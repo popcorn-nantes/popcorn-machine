@@ -66,7 +66,11 @@ module.exports = {
   ],
   gustave: {
     JSONDirectory: popcorn.dirApiPath,
-    compilers: ['compilers/persons.js', 'compilers/pages.js']
+    compilers: [
+      'compilers/persons.js',
+      'compilers/pages.js',
+      'compilers/popcorns.js'
+    ]
   },
   generate: {
     dir: popcorn.dirDistPath
