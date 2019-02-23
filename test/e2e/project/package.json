@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "dev": "../../../cli.js",
-    "build": "../../../cli.js build",
     "generate": "../../../cli.js generate"
   }
 }

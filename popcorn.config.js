@@ -14,9 +14,8 @@ const slogan = `Trouvez un développeur freelance ${
 } sans intermédiaire et sans frais.`
 
 module.exports = {
-  ...config,
-  // Les variables ci-dessous ne sont pas surchargeables par une
-  // instance de popcorn
+  location: config.location,
+
   title,
   subtitle,
   slogan,

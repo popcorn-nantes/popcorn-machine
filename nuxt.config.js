@@ -5,6 +5,10 @@ const popcorn = require('./popcorn.config.js')
 const serveStatic = require('serve-static')
 const path = require('path')
 
+if (process.env.NODE_ENV === 'development') {
+  console.log('popcorn', JSON.stringify(popcorn, 0, 2))
+}
+
 module.exports = {
   mode: 'universal',
   buildDir: popcorn.dirBuildPath,
