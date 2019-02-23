@@ -1,14 +1,14 @@
 const { POPCORN_DIR } = process.env
 require('dotenv').config({ path: POPCORN_DIR + '/.env' })
-const path = require('path')
 const { generateSocialShareHeadersMeta } = require('./services/helpers.js')
 const popcorn = require('./popcorn.config.js')
 const serveStatic = require('serve-static')
+const path = require('path')
 
 module.exports = {
   mode: 'universal',
-  buildDir: POPCORN_DIR + '/' + popcorn.dir_build,
-  // those variables are accessible both from server and client JavaScript.
+  buildDir: popcorn.dirBuildPath,
+  // ces variables seront accessibles côté client comme côté serveur
   env: {
     POPCORN_BASE_URL: process.env.POPCORN_BASE_URL,
     POPCORN_SLACK_WEBHOOK: process.env.POPCORN_SLACK_WEBHOOK,
@@ -18,9 +18,8 @@ module.exports = {
     POPCORN_SUBTITLE: popcorn.subtitle,
     POPCORN_OG_DEFAULT_TITLE: popcorn.ogDefaultTitle,
     POPCORN_OG_DEFAULT_DESCRIPTION: popcorn.ogDefaultDescription,
-    POPCORN_OG_DEFAULT_URL: process.env.POPCORN_BASE_URL,
-    POPCORN_OG_DEFAULT_IMAGE:
-      process.env.POPCORN_BASE_URL + '/images/popcorn.jpg'
+    POPCORN_OG_DEFAULT_URL: popcorn.ogDefaultUrl,
+    POPCORN_OG_DEFAULT_IMAGE: popcorn.ogDefaultImage
   },
   /*
    ** Headers of the page
@@ -66,23 +65,23 @@ module.exports = {
     '~/modules/copyPublic.js'
   ],
   gustave: {
-    JSONDirectory: path.resolve(POPCORN_DIR, popcorn.dir_api),
-    contentDirectory: path.resolve(POPCORN_DIR, popcorn.dir_content),
+    JSONDirectory: popcorn.dirApiPath,
     compilers: ['compilers/persons.js', 'compilers/pages.js']
   },
   generate: {
-    dir: path.resolve(POPCORN_DIR, popcorn.dir_dist)
+    dir: popcorn.dirDistPath
   },
   build: {
     extend(config) {
       // override and set some aliases
-      config.resolve.alias['@api'] = path.resolve(POPCORN_DIR, popcorn.dir_api)
+      config.resolve.alias['@api'] = popcorn.dirApiPath
     }
   },
   serverMiddleware: [
     {
-      path: '/' + popcorn.dir_public,
-      handler: serveStatic(path.resolve(POPCORN_DIR, popcorn.dir_public))
+      // servir les fichiers du dossier "public" pendant le dev
+      path: '/' + path.basename(popcorn.dirPublicPath),
+      handler: serveStatic(popcorn.dirPublicPath)
     }
   ]
 }
