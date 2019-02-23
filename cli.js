@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 const cli = require('@nuxt/cli')
 
-const { PWD } = process.env
-
 // la racine du popcorn qui utilise 'popcorn-machine'
-process.env.POPCORN_DIR = PWD
-
-// le chemin vers le module 'popcorn-machine'
-process.env.POPCORN_MACHINE_DIR = __dirname
+process.env.POPCORN_DIR = process.env.PWD
 
 process.chdir(__dirname)
 
