@@ -1,6 +1,6 @@
 <template>
   <div class="popcorn" :id="`popcorn-${popcorn.$slug}`">
-    <a target="_blank" :href="popcorn.url" class="card">
+    <a :href="popcorn.url" class="card">
       <PopcornCardPhoto :popcorn="popcorn"/>
     </a>
   </div>
