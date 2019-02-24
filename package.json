@@ -2,6 +2,7 @@
   "name": "popcorn-machine",
   "version": "2.0.1",
   "description": "popcorn machine",
+  "license": "MIT",
   "bin": {
     "popcorn": "./cli.js"
   },
