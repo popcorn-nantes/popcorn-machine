@@ -13,6 +13,8 @@
 const { resolve } = require('path')
 
 module.exports = (on, config) => {
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
   process.env.POPCORN_DIR = resolve(process.env.PWD, 'test/e2e/project')
   require('dotenv').config({ path: process.env.POPCORN_DIR + '/.env' })
   const popcornConfig = require('../../../popcorn.config')
