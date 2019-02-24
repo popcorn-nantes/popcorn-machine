@@ -18,7 +18,7 @@ export function generateSocialShareHeadersMeta({
 }) {
   return [
     // open graph
-    { hid: 'og:site_name', name: 'og:site_name', content: 'Popcorn' },
+    { hid: 'og:site_name', property: 'og:site_name', content: 'Popcorn' },
     {
       hid: 'og:url',
       property: 'og:url',
