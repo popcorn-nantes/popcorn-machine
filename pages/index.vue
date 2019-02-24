@@ -66,7 +66,11 @@ export default {
     }
   },
   created() {
-    this.persons = this.filterPersons(this.$store.state.currentSearch)
+    // si on vient d'une autre page, filtrer les profils en fonction
+    // de la recherche en cours, si il y en a une.
+    if (this.$store.state.currentSearch.trim()) {
+      this.persons = this.filterPersons(this.$store.state.currentSearch)
+    }
   }
 }
 </script>
