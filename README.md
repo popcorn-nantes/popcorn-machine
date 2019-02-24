@@ -1,12 +1,19 @@
 # POPCORN-MACHINE 🍿
 
-La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [Popcorn Nantes](https://popcorn-nantes.github.io/).
+La machine à Popcorn permet de créer son propre "Popcorn" : un annuaire local de développeurs freelances, tel que celui de [Popcorn Nantes](https://popcorn-nantes.github.io/).
+
+## Les objectifs d'un annuaire Popcorn
+
+- 📈 Etre un canal pour trouver des affaires dans sa **localité** sans commission ni intermédiaire
+- 📗 Open source : on maîtrise les fonctionnalités de la plateforme, tel que les résultats de recherche, les informations affichées par nos profils etc
+- 💬 Faire circuler les tuyaux boulot entre freelances via le tchat.
+- 💪 Offrir une alternative locale aux _market places_ de freelances centralisées
 
 ## FONCTIONNALITES
 
-- SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
-- Gestion des profils et des pages statiques
+- Gestion des profils de freelance et de pages statiques
 - Recherche instantanée sur les compétences et mot-clefs du profils
+- SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
 - Support Gravatar pour les photos du profil
 - Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
 - Une page qui affichent tous les autres popcorns francophones
@@ -42,25 +49,3 @@ L'idée expérimentée par _Popcorn_ est d'avoir un site aussi léger techniquem
 Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustave](https://github.com/yann-yinn/nuxt-gustave). Ce sont ces fichiers JSON qui sont ensuite consommés par les composants Vue.js.
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
-
-## Installation (WIP)
-
-Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter
-
-Puis:
-
-```sh
-npm install
-```
-
-démarrer le serveur de dev
-
-```sh
-npm run dev
-```
-
-Générer le site en html:
-
-```sh
-npm run generate
-```
