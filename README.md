@@ -4,14 +4,22 @@ La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [
 
 ## FONCTIONNALITES
 
-- JAMStack : le site est généré statiquement avec les avantages habituels: facile à héberger gratuitement, déployable sur github ou Netlify, déploiements atomiques etc ( https://jamstack.wtf/ )
 - SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
 - Gestion des profils et des pages statiques
 - Recherche instantanée sur les compétences et mot-clefs du profils
 - Support Gravatar pour les photos du profil
 - Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
+- Une page qui affichent tous les autres popcorns francophones
 
-## PHILOSOPHIE TECHNIQUE :  0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
+## Ajouter son Popcorn dans l'annuaire des Popcorns
+
+- Forke ce dépôt
+- crée ta fiche Popcorn dans `content/popcorns`
+- Choisis une belle image qui symbolise bien d'après toi la localité de ton Popcorn
+- Attention ! L'image doit faire 100ko maximum
+- Soumettre ta pull request ! Ton popcorn apparaitra dans la page "Annuaire des Popcorns" de tous les Popcorns dès qu'ils auront mis à jour leur version de `popcorn-machine`.
+
+## PHILOSOPHIE TECHNIQUE : 0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
 
 Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique pourrait être:
 
@@ -37,7 +45,7 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 
 ## Installation (WIP)
 
-Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter 
+Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter
 
 Puis:
 

@@ -2,7 +2,7 @@
   <div class="person container section">
     <div class="columns">
       <div class="column">
-        <PersonCardPhoto :person="person"/>
+        <PhotoCard :imageUrl="person.photo"/>
       </div>
       <div class="column is-two-thirds">
         <div class="columns">
@@ -54,12 +54,12 @@
 
 <script>
 import Tags from './Tags'
-import PersonCardPhoto from './PersonCardPhoto'
+import PhotoCard from './PhotoCard'
 
 export default {
   components: {
     Tags,
-    PersonCardPhoto
+    PhotoCard
   },
   props: {
     person: {
