@@ -1,16 +1,23 @@
 <template>
   <div class="popcorn" :id="`popcorn-${popcorn.$slug}`">
-    <a :href="popcorn.url" class="card">
-      <PopcornCardPhoto :popcorn="popcorn"/>
+    <a :href="popcorn.url">
+      <BulmaCardHoverEffect>
+        <div class="card">
+          <PhotoCard :imageUrl="popcorn.image">
+            <span class="title is-2">{{popcorn.name}}</span>
+          </PhotoCard>
+        </div>
+      </BulmaCardHoverEffect>
     </a>
   </div>
 </template>
 
 <script>
-import PopcornCardPhoto from './PopcornCardPhoto'
+import PhotoCard from './PhotoCard'
+import BulmaCardHoverEffect from './BulmaCardHoverEffect'
 
 export default {
-  components: { PopcornCardPhoto },
+  components: { PhotoCard, BulmaCardHoverEffect },
   props: {
     popcorn: {
       type: Object,
@@ -19,18 +26,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.card:hover {
-  transition: all 0.2s ease-in-out;
-  top: -5px;
-  box-shadow: 0 2px 20px;
-  cursor: pointer;
-}
-.card {
-  height: 100%;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  top: 0;
-}
-</style>
