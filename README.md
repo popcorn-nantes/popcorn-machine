@@ -16,10 +16,10 @@ La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [
 - Forke ce dépôt
 - crée ta fiche Popcorn dans `content/popcorns`
 - Choisis une belle image qui symbolise bien d'après toi la localité de ton Popcorn
-- Attention ! L'image doit faire 100ko maximum 
-- Soumettre ta pull request !
+- Attention ! L'image doit faire 100ko maximum
+- Soumettre ta pull request ! Ton popcorn apparaitra dans la page "Annuaire des Popcorns" de tous les Popcorns dès qu'ils auront mis à jour leur version de `popcorn-machine`.
 
-## PHILOSOPHIE TECHNIQUE :  0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
+## PHILOSOPHIE TECHNIQUE : 0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
 
 Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique pourrait être:
 
@@ -45,7 +45,7 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 
 ## Installation (WIP)
 
-Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter 
+Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter
 
 Puis:
 
