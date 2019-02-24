@@ -6,7 +6,6 @@
     "popcorn": "./cli.js"
   },
   "scripts": {
-    "tests": "./tests.sh",
     "e2e": "cypress run",
     "e2e:open": "cypress open"
   },
