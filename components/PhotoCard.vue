@@ -32,13 +32,11 @@ export default {
 }
 .photo-container {
   height: 300px;
-  z-index: 0;
 }
 .photo {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 .legend {
   position: absolute;
@@ -48,7 +46,6 @@ export default {
 .legend-title {
   text-align: center;
   color: white;
-  z-index: 10;
   padding: 0.8rem;
   background-color: rgba(0, 0, 0, 0.6);
 }
