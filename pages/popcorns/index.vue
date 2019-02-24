@@ -1,8 +1,8 @@
 <template>
   <div class="container has-text-centered">
     <div class="section">
-      <h1 class="title">Les autres Popcorn en France</h1>
-      <h2 class="subtitle">Trouvez un popcorn près de chez vous !</h2>
+      <h1 class="title">Les autres Popcorns en France</h1>
+      <h2 class="subtitle">Trouvez un Popcorn près de chez vous !</h2>
     </div>
 
     <div class="section">
