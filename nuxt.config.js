@@ -21,6 +21,7 @@ module.exports = {
     POPCORN_OG_DEFAULT_URL: popcorn.ogDefaultUrl,
     POPCORN_OG_DEFAULT_IMAGE: popcorn.ogDefaultImage
   },
+  css: ['@/static/css/bulma.min.css', '@/static/css/app.css'],
   /*
    ** Headers of the page
    */
@@ -42,14 +43,6 @@ module.exports = {
         image: popcorn.ogDefaultImage,
         url: popcorn.ogDefaultUrl
       })
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '/css/bulma.min.css'
-      }
     ]
   },
   /*
@@ -66,7 +59,11 @@ module.exports = {
   ],
   gustave: {
     JSONDirectory: popcorn.dirApiPath,
-    compilers: ['compilers/persons.js', 'compilers/pages.js']
+    compilers: [
+      'compilers/persons.js',
+      'compilers/pages.js',
+      'compilers/popcorns.js'
+    ]
   },
   generate: {
     dir: popcorn.dirDistPath
