@@ -1,6 +1,6 @@
-describe('Check html head metas for social sharing (Facebook, Linkedin, Twitter ...)', () => {
-  const popcornConfig = JSON.parse(Cypress.config('popcorn'))
+import popcornConfig from '../project/popcorn.config'
 
+describe('Check html head metas for social sharing (Facebook, Linkedin, Twitter ...)', () => {
   it('Popcorn config should be filled with default open graph values', () => {
     expect(popcornConfig.ogDefaultImage).to.contains('/images/popcorn.jpg')
     expect(popcornConfig.ogDefaultTitle).be.a('string')

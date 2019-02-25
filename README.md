@@ -11,7 +11,7 @@ La machine à Popcorn permet de créer un annuaire "Popcorn", tel que celui de [
 - Support Gravatar pour les photos du profil
 - Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
 
-## PHILOSOPHIE TECHNIQUE :  0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
+## PHILOSOPHIE TECHNIQUE : 0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
 
 Le mot "Popcorn" a été notamment choisi pour évoquer une grande légèreté. Son mantra technique pourrait être:
 
@@ -35,9 +35,25 @@ Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustav
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
 
+### TESTS
+
+Cypress est utilisé pour tester le site. Pour lancer les tests, il faut d'abord démarrer l projet de test, qui sera lancée sur le port `44000`
+
+```sh
+# démarrer le projet de test sur le port 44000
+cd test/e2e/project
+npm run dev
+# revenir à la racine du projet
+cd -
+# Lancer la suite de tests dans le terminal
+npm run e2e
+# Lancer la suite de tests en ouvrant un chrome (recommandé pour le debug)
+npm run e2e:open
+```
+
 ## Installation (WIP)
 
-Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter 
+Utiliser le template de démarrage https://github.com/popcorn-nantes/popcorn-starter
 
 Puis:
 
