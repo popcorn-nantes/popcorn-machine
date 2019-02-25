@@ -29,6 +29,11 @@
             to="/page/a-propos"
             class="navbar-item"
           >En savoir plus</nuxt-link>
+          <nuxt-link
+            @click.native="showOnMobile = false"
+            to="/popcorns"
+            class="navbar-item"
+          >Annuaire des Popcorns</nuxt-link>
           <span class="navbar-item">
             <nuxt-link
               @click.native="showOnMobile = false"

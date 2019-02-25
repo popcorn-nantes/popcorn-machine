@@ -1,8 +1,9 @@
 <template>
   <div class="person" :id="`person-${person.$slug}`">
     <div class="card" @click="detail()">
-      <PersonCardPhoto :person="person"/>
-
+      <PhotoCard :imageUrl="person.photo">
+        <span class="title is-4">{{person.prenom}} {{person.nom}}</span>
+      </PhotoCard>
       <div class="card-content">
         <h2 style="font-size:20px;" class="has-text-centered">{{person.titre}}</h2>
         <h3
@@ -33,12 +34,12 @@
 
 <script>
 import Tags from './Tags'
-import PersonCardPhoto from './PersonCardPhoto'
+import PhotoCard from './PhotoCard'
 
 export default {
   components: {
     Tags,
-    PersonCardPhoto
+    PhotoCard
   },
   props: {
     person: {
@@ -56,18 +57,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.card:hover {
-  transition: all 0.2s ease-in-out;
-  top: -5px;
-  box-shadow: 0 2px 20px;
-  cursor: pointer;
-}
-.card {
-  height: 100%;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  top: 0;
-}
-</style>
