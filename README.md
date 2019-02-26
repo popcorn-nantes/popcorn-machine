@@ -49,3 +49,10 @@ L'idée expérimentée par _Popcorn_ est d'avoir un site aussi léger techniquem
 Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustave](https://github.com/yann-yinn/nuxt-gustave). Ce sont ces fichiers JSON qui sont ensuite consommés par les composants Vue.js.
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
+
+## Créer son propre popcorn
+
+1. Télécharge le [popcorn-starter](https://github.com/popcorn-nantes/popcorn-starter)
+2. Installe puis démarre le Popcorn avec `npm install` puis `npm run dev`
+3. Recherche toutes les occurences de `{{MON_POPCORN}}` et `{{MA_LOCALITE}}` pour les remplacer par les valeurs de ton Popcorn.
+4. Ne pas hésitez à nous contacter si vous avez besoin d'aide, en ouvrant une issue sur ce dépôt.
