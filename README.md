@@ -55,4 +55,4 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 1. Télécharge le [popcorn-starter](https://github.com/popcorn-nantes/popcorn-starter)
 2. Installe puis démarre le Popcorn avec `npm install` puis `npm run dev`
 3. Recherche toutes les occurences de `{{MON_POPCORN}}` et `{{MA_LOCALITE}}` pour les remplacer par les valeurs de ton Popcorn.
-4. Ne pas hésitez à nous contacter si vous avez besoin d'aide, en ouvrant une issue sur ce dépôt.
+4. N'hésite pas  à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
