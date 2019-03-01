@@ -52,7 +52,9 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 
 ## Créer son propre popcorn
 
-1. Télécharge le [popcorn-starter](https://github.com/popcorn-nantes/popcorn-starter)
-2. Installe puis démarre le Popcorn avec `npm install` puis `npm run dev`
-3. Recherche toutes les occurences de `{{MON_POPCORN}}` et `{{MA_LOCALITE}}` pour les remplacer par les valeurs de ton Popcorn.
-4. N'hésite pas  à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
+- Télécharge le popcorn-starter
+- Renomme le fichier .env.example, renomme le en .env avec les valeurs qui correspondent à ton Popcorn
+- Installe puis démarre le Popcorn avec `npm install` puis `npm run dev`
+- Recherche toutes les occurences de `{{MON_POPCORN}}` et `{{MA_LOCALITE}}` pour les remplacer par les valeurs de ton Popcorn.
+- Si tu veux déployer ton site avec Travis sur Github, il faudra connecter l'application Travis à Github et renseigner la variable GITHUB_TOKEN
+- N'hésite pas à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
