@@ -1,4 +1,4 @@
-import popcornConfig from '../project/popcorn.config'
+const popcornConfig = JSON.parse(Cypress.config('popcorn'))
 
 describe('Check html head metas for social sharing (Facebook, Linkedin, Twitter ...)', () => {
   it('Popcorn config should be filled with default open graph values', () => {

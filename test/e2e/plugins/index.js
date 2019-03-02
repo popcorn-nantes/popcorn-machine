@@ -1,3 +1,4 @@
+const path = require('path')
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -13,5 +14,15 @@
 
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+  // load test projet .env file
+  process.env.POPCORN_DIR = path.resolve(process.env.PWD, 'test/e2e/project')
+  const result = require('dotenv').config({
+    path: path.resolve(__dirname, '../project/.env')
+  })
+  const popcornConfig = require('../../../popcorn.config')
+  // passe popcornConfig and .env config to cypress, so we can access it from
+  // browser tests
+  config.popcorn = JSON.stringify(popcornConfig)
+  config.dotenv = JSON.stringify(result.parsed)
+  return config
 }

@@ -4,7 +4,7 @@
   "description": "This is a e2e project to test popcorn-machine",
   "license": "MIT",
   "scripts": {
-    "dev": " PORT=44000 ../../../cli.js",
+    "dev": "PORT=44000 ../../../cli.js",
     "generate": "../../../cli.js generate"
   }
 }
