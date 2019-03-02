@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 describe('Tests', () => {
   it('Visits index page', () => {
     cy.visit('/')

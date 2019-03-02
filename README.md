@@ -50,6 +50,7 @@ Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustav
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
 
+
 ## Créer son propre popcorn
 
 - Télécharge le popcorn-starter
@@ -59,3 +60,20 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 - Si tu veux déployer ton site avec Travis sur Github, il faudra connecter l'application Travis à Github et renseigner la variable GITHUB_TOKEN.
 - *N'oublie pas de renseigner sur Travis ou autre toutes les variables présentes dans le fichier .env.example*
 - N'hésite pas à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
+
+
+### Tests
+
+Cypress est utilisé pour tester le site. Pour lancer les tests, il faut d'abord démarrer le projet de test qui sera lancé sur le port `44000`
+
+```sh
+# démarrer le projet de test sur le port 44000
+cd test/e2e/project
+npm run dev
+# revenir à la racine du projet
+cd -
+# Lancer la suite de tests dans le terminal
+npm run e2e
+# Lancer la suite de tests en ouvrant un chrome (recommandé pour le debug)
+npm run e2e:open
+```
