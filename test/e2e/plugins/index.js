@@ -16,12 +16,17 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // load test projet .env file
   process.env.POPCORN_DIR = path.resolve(process.env.PWD, 'test/e2e/project')
+  const envPath = process.env.POPCORN_DIR + '/.env'
   const result = require('dotenv').config({
-    path: path.resolve(__dirname, '../project/.env')
+    path: envPath
   })
   console.log('==============')
   console.log(
-    'Cypress has loaded .env file: ' + JSON.stringify(result.parsed, 0, 2)
+    `Cypress has loaded ${envPath} file: ' ${JSON.stringify(
+      result.parsed,
+      0,
+      2
+    )}`
   )
   console.log('==============')
   const popcornConfig = require('../../../popcorn.config')
