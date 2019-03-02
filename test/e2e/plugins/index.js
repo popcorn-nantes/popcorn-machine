@@ -19,6 +19,11 @@ module.exports = (on, config) => {
   const result = require('dotenv').config({
     path: path.resolve(__dirname, '../project/.env')
   })
+  console.log('==============')
+  console.log(
+    'Cypress has loaded .env file: ' + JSON.stringify(result.parsed, 0, 2)
+  )
+  console.log('==============')
   const popcornConfig = require('../../../popcorn.config')
   // passe popcornConfig and .env config to cypress, so we can access it from
   // browser tests
