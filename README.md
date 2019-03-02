@@ -62,7 +62,7 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 - N'hésite pas à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
 
 
-### TESTS
+### Tests
 
 Cypress est utilisé pour tester le site. Pour lancer les tests, il faut d'abord démarrer le projet de test qui sera lancé sur le port `44000`
 
