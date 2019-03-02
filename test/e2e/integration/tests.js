@@ -1,5 +1,10 @@
 /* eslint-disable */
 describe('Tests', () => {
+  it('Env variables must be defined', () => {
+    const env = JSON.parse(Cypress.config('dotenv'))
+    expect(env.POPCORN_BASE_URL).be.a('string')
+    expect(env.POPCORN_SLACK_WEBHOOK).be.a('string')
+  })
   it('Visits index page', () => {
     cy.visit('/')
     cy.contains('h1', 'Popcorn : trouvez un·e développeur·e freelance à Nantes')
