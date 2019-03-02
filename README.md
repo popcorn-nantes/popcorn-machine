@@ -64,7 +64,7 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 
 ### TESTS
 
-Cypress est utilisé pour tester le site. Pour lancer les tests, il faut d'abord démarrer l projet de test, qui sera lancée sur le port `44000`
+Cypress est utilisé pour tester le site. Pour lancer les tests, il faut d'abord démarrer le projet de test qui sera lancé sur le port `44000`
 
 ```sh
 # démarrer le projet de test sur le port 44000
