@@ -22,8 +22,7 @@ La machine à Popcorn permet de créer son propre "Popcorn" : un annuaire local 
 
 - Forke ce dépôt
 - crée ta fiche Popcorn dans `content/popcorns`
-- Choisis une belle image qui symbolise bien d'après toi la localité de ton Popcorn
-- Attention ! L'image doit faire 100ko maximum
+- Choisis une belle image qui symbolise bien d'après toi la localité de ton Popcorn et met là dans le dossier `/static/images/`. Attention ! L'image doit faire 100ko maximum
 - Soumettre ta pull request ! Ton popcorn apparaitra dans la page "Annuaire des Popcorns" de tous les Popcorns dès qu'ils auront mis à jour leur version de `popcorn-machine`.
 
 ## PHILOSOPHIE TECHNIQUE : 0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
