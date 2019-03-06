@@ -10,5 +10,7 @@ La machine à Popcorn permet d'ajouter son propre "Popcorn" à l'annuaire des Po
 **Attention ! L'image doit faire 100ko maximum**
 - Soumettre ta pull request ! Ton popcorn apparaitra dans la page "Annuaire des Popcorns" de tous les Popcorns dès qu'ils auront mis à jour leur version de `popcorn-machine`.
 
-### Tout savoir sur les Popcorns
-La présentation du projet, sa philosophie et sa documentation [se trouve ici](https://github.com/popcorn-nantes/popcorn-doc).
+---
+
+### En savoir plus sur le projet Popcorn
+La présentation du projet, sa philosophie et sa documentation technique [sont disponibles ici](https://github.com/popcorn-nantes/popcorn-doc).
