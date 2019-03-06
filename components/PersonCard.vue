@@ -7,9 +7,9 @@
       <div class="card-content">
         <h2 style="font-size:20px;" class="has-text-centered">{{person.titre}}</h2>
         <h3
-          v-show="person.sous_titre"
-          style="font-size:15px;font-style:italic"
-          class="has-text-centered"
+            v-show="person.sous_titre"
+            style="font-size:15px;font-style:italic"
+            class="has-text-centered"
         >{{person.sous_titre}}</h3>
         <div class="has-text-centered" style="padding-top: 1em">
           <Tags class="domaines-metiers" :tags="person.domaines_metiers"/>
@@ -22,8 +22,8 @@
           <div class="has-text-centered">
             <br>
             <nuxt-link
-              :to="{path: `/person/${person.$slug}`,query: { search: $store.getters.currentSearch}}"
-              class="button is-primary"
+                :to="{path: `/person/${person.$slug}`,query: { search: $store.getters.currentSearch}}"
+                class="button is-info"
             >Voir le profil</nuxt-link>
           </div>
         </div>
@@ -33,27 +33,27 @@
 </template>
 
 <script>
-import Tags from './Tags'
-import PhotoCard from './PhotoCard'
+    import Tags from './Tags'
+    import PhotoCard from './PhotoCard'
 
-export default {
-  components: {
-    Tags,
-    PhotoCard
-  },
-  props: {
-    person: {
-      type: Object,
-      required: true
+    export default {
+        components: {
+            Tags,
+            PhotoCard
+        },
+        props: {
+            person: {
+                type: Object,
+                required: true
+            }
+        },
+        methods: {
+            detail() {
+                this.$router.push({
+                    path: `/person/${this.person.$slug}`,
+                    query: { search: this.$store.getters.currentSearch }
+                })
+            }
+        }
     }
-  },
-  methods: {
-    detail() {
-      this.$router.push({
-        path: `/person/${this.person.$slug}`,
-        query: { search: this.$store.getters.currentSearch }
-      })
-    }
-  }
-}
 </script>
