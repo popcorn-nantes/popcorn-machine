@@ -54,7 +54,7 @@
           </div>
         </div>
         <input
-          class="button is-dark"
+          class="button is-warning"
           :disabled="requestStatus === 'PENDING'"
           type="submit"
           :value=" requestStatus === 'PENDING' ? 'envoi en cours': 'Envoyer'"

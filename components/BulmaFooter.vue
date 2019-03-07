@@ -2,7 +2,7 @@
   <footer class="footer has-background-black-ter">
     <div class="content has-text-centered">
       <p class="has-text-white-ter">
-        <strong class="has-text-white-ter">Popcorn</strong> 🍿
+        <span class="has-text-white-ter">Popcorn</span> 🍿
       </p>
     </div>
   </footer>
@@ -10,7 +10,7 @@
 
 <style scoped>
   footer {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
 </style>
 

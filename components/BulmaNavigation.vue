@@ -40,7 +40,7 @@
           <nuxt-link
               @click.native="showOnMobile = false"
               to="/page/inscription"
-              class="button is-danger has-text-dark"
+              class="button is-danger has-text-white"
           >Freelance ? Inscription</nuxt-link>
         </span>
             <div class="navbar-item">
@@ -90,6 +90,10 @@
   .navbar-brand a {
     position: relative;
   }
+  .navbar-brand .navbar-item {
+    padding-top: 0;
+  }
+
   .navbar-item:hover {
     color: #363636;
   }
@@ -99,14 +103,10 @@
     right: 5px;
     white-space: nowrap;
     z-index: 1;
+    transform-origin: bottom right;
     transform: rotate(-2deg);
-    text-shadow: 0 0 10px hsl(0, 0%, 60%);
+    text-shadow: 0 0 10px hsl(0, 0%, 80%);
     color: #D22321;
-  }
-
-  .button.is-danger {
-    background-color: #D22321;
-    color: white !important;
   }
 
   .navbar-end .navbar-item:last-child,

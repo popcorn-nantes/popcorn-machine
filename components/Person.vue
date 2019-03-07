@@ -18,8 +18,8 @@
               </h2>
             </div>
             <div class="column has-text-right-desktop">
-              <button class="button is-info" @click="showModal = true">
-                <img style="width:20px; padding-right: 5px" src="/icons/envelope.svg">
+              <button class="button is-warning" @click="showModal = true">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
                 <span>Proposer un projet</span>
               </button>
             </div>

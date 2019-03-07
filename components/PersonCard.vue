@@ -23,7 +23,7 @@
             <br>
             <nuxt-link
                 :to="{path: `/person/${person.$slug}`,query: { search: $store.getters.currentSearch}}"
-                class="button is-info"
+                class="button is-warning"
             >Voir le profil</nuxt-link>
           </div>
         </div>
