@@ -1,8 +1,8 @@
 <template>
   <div>
-    <BulmaNavigation/>
-    <nuxt/>
-    <BulmaFooter/>
+    <BulmaNavigation />
+    <nuxt />
+    <BulmaFooter />
   </div>
 </template>
 
@@ -18,45 +18,44 @@ export default {
 }
 </script>
 
-
 <style>
-  body,
-  #__nuxt,
-  #__layout,
-  #__layout > div {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+body,
+#__nuxt,
+#__layout,
+#__layout > div {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1;
-  }
+main {
+  flex: 1;
+}
 
-  main .content a:not(.button) {
-    color: hsl(0, 0%, 21%);
-    text-decoration: underline;
-  }
+main .content a:not(.button) {
+  color: hsl(0, 0%, 21%);
+  text-decoration: underline;
+}
 
-  .modal-content {
-    width: 95%;
-  }
+.modal-content {
+  width: 95%;
+}
 
-  .button.is-warning,
-  .has-background-warning {
-    background-color: #F0D37A !important;
-  }
+.button.is-warning,
+.has-background-warning {
+  background-color: #f0d37a !important;
+}
 
-  .button.is-danger,
-  .has-background-danger {
-    background-color: #D22321 !important;
-  }
+.button.is-danger,
+.has-background-danger {
+  background-color: #d22321 !important;
+}
 
-  .has-text-warning {
-    color: #F0D37A !important;
-  }
+.has-text-warning {
+  color: #f0d37a !important;
+}
 
-  .has-text-danger {
-    color: #D22321 !important;
-  }
+.has-text-danger {
+  color: #d22321 !important;
+}
 </style>

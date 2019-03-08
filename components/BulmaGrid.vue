@@ -11,7 +11,11 @@ Example :
 <template>
   <div>
     <div class="columns" v-for="(column, rowIndex) in columns" :key="rowIndex">
-      <div v-for="(item, index) in column" :key="itemKey(item, index)" :class="columnClasses">
+      <div
+        v-for="(item, index) in column"
+        :key="itemKey(item, index)"
+        :class="columnClasses"
+      >
         <slot :item="item" :index="index"></slot>
       </div>
     </div>

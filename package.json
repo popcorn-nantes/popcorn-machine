@@ -8,7 +8,8 @@
   },
   "scripts": {
     "e2e": "cypress run",
-    "e2e:open": "cypress open"
+    "e2e:open": "cypress open",
+    "prettier": "prettier --write **/*.{js,vue,json,css,md} !**/**.min.css"
   },
   "husky": {
     "hooks": {
@@ -16,7 +17,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,vue,json,css,md}": [
+    "*.{js,vue,json,css,md} !**/**.min.css": [
       "prettier --write",
       "git add"
     ]

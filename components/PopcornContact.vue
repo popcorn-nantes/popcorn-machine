@@ -2,9 +2,13 @@
   <div>
     <h1 class="title">Contact</h1>
     <h2
-      v-if="requestStatus !== 'FINISHED_ERROR' && requestStatus !== 'FINISHED_OK'"
+      v-if="
+        requestStatus !== 'FINISHED_ERROR' && requestStatus !== 'FINISHED_OK'
+      "
       class="subtitle"
-    >Un retour, une question ou une suggestion concernant le site ? C'est ici !</h2>
+    >
+      Un retour, une question ou une suggestion concernant le site ? C'est ici !
+    </h2>
 
     <template v-if="requestStatus === 'FINISHED_OK'">
       <div class="message is-success">
@@ -14,20 +18,26 @@
 
     <template v-if="requestStatus === 'FINISHED_ERROR'">
       <div class="message is-danger">
-        <div
-          class="message-body"
-        >Nous sommes désolés, une erreur est survenue pendant l'envoi du message :
-          <br>
-          {{requestError}}
+        <div class="message-body">
+          Nous sommes désolés, une erreur est survenue pendant l'envoi du
+          message :
+          <br />
+          {{ requestError }}
         </div>
       </div>
     </template>
 
-    <template v-if="requestStatus !== 'FINISHED_OK' && requestStatus !== 'FINISHED_ERROR'">
+    <template
+      v-if="
+        requestStatus !== 'FINISHED_OK' && requestStatus !== 'FINISHED_ERROR'
+      "
+    >
       <form @submit.prevent="onSubmit">
         <div v-show="errors.length > 0" class="message is-danger">
           <div class="message-body">
-            <div v-for="(error, index) in errors" :key="index">{{error.message}}</div>
+            <div v-for="(error, index) in errors" :key="index">
+              {{ error.message }}
+            </div>
           </div>
         </div>
         <div class="field">
@@ -38,8 +48,8 @@
               type="text"
               class="input"
               v-model="inputs.email"
-              :class="{'is-danger': getError('email')}"
-            >
+              :class="{ 'is-danger': getError('email') }"
+            />
           </div>
         </div>
         <div class="field">
@@ -49,7 +59,7 @@
               id="message"
               v-model="inputs.message"
               class="textarea"
-              :class="{'is-danger': getError('message')}"
+              :class="{ 'is-danger': getError('message') }"
             ></textarea>
           </div>
         </div>
@@ -57,8 +67,8 @@
           class="button is-warning"
           :disabled="requestStatus === 'PENDING'"
           type="submit"
-          :value=" requestStatus === 'PENDING' ? 'envoi en cours': 'Envoyer'"
-        >
+          :value="requestStatus === 'PENDING' ? 'envoi en cours' : 'Envoyer'"
+        />
       </form>
     </template>
   </div>

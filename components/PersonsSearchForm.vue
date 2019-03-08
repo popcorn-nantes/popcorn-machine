@@ -8,7 +8,7 @@
         @input="$emit('input', $event.target.value)"
         type="text"
         placeholder="Cherchez par domaine (site web, application mobile, boutique...) ou technologie (React, WordPress, Java, PHP ... )"
-      >
+      />
       <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
     </p>
   </div>
@@ -26,9 +26,9 @@ export default {
 </script>
 
 <style scoped>
-  p.control {
-    display: inline-block;
-    width: 100%;
-    max-width: 900px;
-  }
+p.control {
+  display: inline-block;
+  width: 100%;
+  max-width: 900px;
+}
 </style>

@@ -9,8 +9,7 @@
 </template>
 
 <style scoped>
-  footer {
-    padding: 1rem 2rem;
-  }
+footer {
+  padding: 1rem 2rem;
+}
 </style>
-
