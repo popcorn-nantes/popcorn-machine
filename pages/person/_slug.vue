@@ -11,9 +11,7 @@ import { getPersonBySlug } from '@/services/content'
 import { generateSocialShareHeadersMeta } from '@/services/helpers'
 
 export default {
-  components: {
-    Person
-  },
+  components: { Person },
   computed: {
     person() {
       return getPersonBySlug(this.$route.params.slug)

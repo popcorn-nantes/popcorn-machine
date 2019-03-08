@@ -18,18 +18,18 @@
 </template>
 
 <script>
-import Persons from '@/components/Persons'
-import PersonsSearchForm from '@/components/PersonsSearchForm'
-import { getPersons } from '@/services/content'
-
-export default {
-  scrollToTop: false,
-  components: {
-    Persons,
-    PersonsSearchForm
-  },
-  data() {
-    return {
+	import Persons from '@/components/Persons'
+	import PersonsSearchForm from '@/components/PersonsSearchForm'
+	import { getPersons } from '@/services/content'
+	
+	export default {
+	  scrollToTop: false,
+	  components: {
+	    Persons,
+	    PersonsSearchForm
+	  },
+	  data() {
+	    return {
       persons: [...getPersons()]
     }
   },
