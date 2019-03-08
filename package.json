@@ -10,12 +10,25 @@
     "e2e": "cypress run",
     "e2e:open": "cypress open"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,.vue,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@nuxt/cli": "^2.3.4",
     "@nuxtjs/dotenv": "^1.3.0",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "esm": "^3.0.84",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
     "md5": "^2.2.1",
     "node-fs-extra": "^0.8.2",
     "nodemon": "^1.18.7",
