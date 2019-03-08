@@ -43,6 +43,15 @@
       this.persons = this.filterPersons(value)
     },
     filterPersons(text) {
+
+
+
+
+
+
+
+
+      
       let persons = getPersons().filter(person => {
         let match = false
         person._exactMatch = false
