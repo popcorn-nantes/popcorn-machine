@@ -1,6 +1,6 @@
 <template>
   <div class="container section">
-    <Person v-if="person" :person="person"/>
+    <Person v-if="person" :person="person" />
     <div v-else>Désolé, cette page n'existe pas ou a été dépubliée. 😭</div>
   </div>
 </template>

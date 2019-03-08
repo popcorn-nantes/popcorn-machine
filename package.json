@@ -16,7 +16,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,.vue,json,css,md}": [
+    "*.{js,vue,json,css,md}": [
       "prettier --write",
       "git add"
     ]

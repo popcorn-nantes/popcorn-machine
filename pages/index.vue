@@ -1,35 +1,38 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">{{title}}</h1>
+      <h1 class="title">{{ title }}</h1>
       <h2 class="subtitle">
-        <em>{{subtitle}}</em>
+        <em>{{ subtitle }}</em>
       </h2>
     </div>
     <div class="container">
       <div class="section">
         <div style="padding-bottom:3em">
-          <PersonsSearchForm :value="$store.state.currentSearch" @input="onInput"/>
+          <PersonsSearchForm
+            :value="$store.state.currentSearch"
+            @input="onInput"
+          />
         </div>
-        <Persons :persons="persons"/>
+        <Persons :persons="persons" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-    import Persons from '@/components/Persons'
-	import PersonsSearchForm from '@/components/PersonsSearchForm'
-	import { getPersons } from '@/services/content'
+import Persons from '@/components/Persons'
+import PersonsSearchForm from '@/components/PersonsSearchForm'
+import { getPersons } from '@/services/content'
 
-	export default {
-	  scrollToTop: false,
-	  components: {
-	    Persons,
-	    PersonsSearchForm
-	  },
-	  data() {
-	    return {
+export default {
+  scrollToTop: false,
+  components: {
+    Persons,
+    PersonsSearchForm
+  },
+  data() {
+    return {
       persons: [...getPersons()]
     }
   },
@@ -43,15 +46,6 @@
       this.persons = this.filterPersons(value)
     },
     filterPersons(text) {
-
-
-
-
-
-
-
-
-      
       let persons = getPersons().filter(person => {
         let match = false
         person._exactMatch = false
