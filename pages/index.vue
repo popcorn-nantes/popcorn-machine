@@ -1,17 +1,20 @@
 <template>
   <div>
     <div style="margin-top:2rem" class="container has-text-centered">
-      <h1 class="title">{{title}}</h1>
+      <h1 class="title">{{ title }}</h1>
       <h2 class="subtitle">
-        <em>{{subtitle}}</em>
+        <em>{{ subtitle }}</em>
       </h2>
     </div>
     <div class="container">
       <div class="section">
         <div style="padding-bottom:3em">
-          <PersonsSearchForm :value="$store.state.currentSearch" @input="onInput"/>
+          <PersonsSearchForm
+            :value="$store.state.currentSearch"
+            @input="onInput"
+          />
         </div>
-        <Persons :persons="persons"/>
+        <Persons :persons="persons" />
       </div>
     </div>
   </div>

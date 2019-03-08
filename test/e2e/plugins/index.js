@@ -20,6 +20,7 @@ module.exports = (on, config) => {
   const result = require('dotenv').config({
     path: envPath
   })
+
   console.log('==============')
   console.log(
     `Cypress has loaded ${envPath} file: ' ${JSON.stringify(
