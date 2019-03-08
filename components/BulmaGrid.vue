@@ -1,5 +1,5 @@
 <!--
-Create automatically a Bulma css Grid from :items 
+Create automatically a Bulma css Grid from :items
 Example :
   <BulmaGrid :items="persons" :itemsByRow="3" :itemKey="(item, index) => item.id">
     <template slot-scope="props">
