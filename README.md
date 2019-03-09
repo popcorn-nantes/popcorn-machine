@@ -49,7 +49,6 @@ Les fichiers markdowns sont convertis en fichier JSON via le module Nuxt [Gustav
 
 Le tout est ensuite exportable en _html_ via la commande `npm run generate` et hébergeable par exemple sur [un dépôt github](https://github.com/popcorn-nantes/popcorn-nantes.github.io).
 
-
 ## Créer son propre popcorn
 
 - Télécharge le popcorn-starter
@@ -57,9 +56,8 @@ Le tout est ensuite exportable en _html_ via la commande `npm run generate` et h
 - Installe puis démarre le Popcorn avec `npm install` puis `npm run dev`
 - Recherche toutes les occurences de `{{MON_POPCORN}}` et `{{MA_LOCALITE}}` pour les remplacer par les valeurs de ton Popcorn.
 - Si tu veux déployer ton site avec Travis sur Github, il faudra connecter l'application Travis à Github et renseigner la variable GITHUB_TOKEN.
-- *N'oublie pas de renseigner sur Travis ou autre toutes les variables présentes dans le fichier .env.example*
+- _N'oublie pas de renseigner sur Travis ou autre toutes les variables présentes dans le fichier .env.example_
 - N'hésite pas à nous contacter si tu as besoin d'aide, en ouvrant une issue sur ce dépôt.
-
 
 ### Tests
 

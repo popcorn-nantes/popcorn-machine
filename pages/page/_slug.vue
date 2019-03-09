@@ -1,8 +1,12 @@
 <template>
-  <div class="container section">
-    <div v-if="page" class="content" v-html="page.$html"></div>
-    <div v-else>Désolé, cette page n'existe pas ou a été dépubliée. 😭</div>
-  </div>
+  <main>
+    <div class="section">
+      <div class="container">
+        <div v-if="page" class="content" v-html="page.$html"></div>
+        <div v-else>Désolé, cette page n'existe pas ou a été dépubliée. 😭</div>
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>

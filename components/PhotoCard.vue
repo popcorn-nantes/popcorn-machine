@@ -1,11 +1,11 @@
 <template>
   <div class="photo-card card-image">
     <div class="photo-container">
-      <img class="photo" v-lazy="imageUrl" alt="">
+      <img class="photo" v-lazy="imageUrl" alt="" />
     </div>
     <div v-if="!!this.$slots.default" class="legend">
       <p class="legend-title">
-        <slot/>
+        <slot />
       </p>
     </div>
   </div>

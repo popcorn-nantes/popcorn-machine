@@ -1,5 +1,5 @@
 <!--
-Create automatically a Bulma css Grid from :items 
+Create automatically a Bulma css Grid from :items
 Example :
   <BulmaGrid :items="persons" :itemsByRow="3" :itemKey="(item, index) => item.id">
     <template slot-scope="props">
@@ -11,7 +11,11 @@ Example :
 <template>
   <div>
     <div class="columns" v-for="(column, rowIndex) in columns" :key="rowIndex">
-      <div v-for="(item, index) in column" :key="itemKey(item, index)" :class="columnClasses">
+      <div
+        v-for="(item, index) in column"
+        :key="itemKey(item, index)"
+        :class="columnClasses"
+      >
         <slot :item="item" :index="index"></slot>
       </div>
     </div>

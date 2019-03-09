@@ -1,6 +1,6 @@
 {
   "name": "popcorn-machine",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "popcorn machine",
   "license": "MIT",
   "bin": {
@@ -8,7 +8,19 @@
   },
   "scripts": {
     "e2e": "cypress run",
-    "e2e:open": "cypress open"
+    "e2e:open": "cypress open",
+    "prettier": "prettier --write **/*.{js,vue,json,css,md} !**/**.min.css"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue,json,css,!.min.css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {

@@ -2,29 +2,37 @@
   <div class="person" :id="`person-${person.$slug}`">
     <div class="card" @click="detail()">
       <PhotoCard :imageUrl="person.photo">
-        <span class="title is-4">{{person.prenom}} {{person.nom}}</span>
+        <span class="title is-4">{{ person.prenom }} {{ person.nom }}</span>
       </PhotoCard>
       <div class="card-content">
-        <h2 style="font-size:20px;" class="has-text-centered">{{person.titre}}</h2>
+        <h2 style="font-size:20px;" class="has-text-centered">
+          {{ person.titre }}
+        </h2>
         <h3
           v-show="person.sous_titre"
           style="font-size:15px;font-style:italic"
           class="has-text-centered"
-        >{{person.sous_titre}}</h3>
+        >
+          {{ person.sous_titre }}
+        </h3>
         <div class="has-text-centered" style="padding-top: 1em">
-          <Tags class="domaines-metiers" :tags="person.domaines_metiers"/>
+          <Tags class="domaines-metiers" :tags="person.domaines_metiers" />
         </div>
 
         <div class="has-text-centered" style="padding-top: 1em">
-          <Tags class="technologies" :tags="person.technologies"/>
+          <Tags class="technologies" :tags="person.technologies" />
         </div>
         <div class="content">
           <div class="has-text-centered">
-            <br>
+            <br />
             <nuxt-link
-              :to="{path: `/person/${person.$slug}`,query: { search: $store.getters.currentSearch}}"
-              class="button is-primary"
-            >Voir le profil</nuxt-link>
+              :to="{
+                path: `/person/${person.$slug}`,
+                query: { search: $store.getters.currentSearch }
+              }"
+              class="button is-warning"
+              >Voir le profil</nuxt-link
+            >
           </div>
         </div>
       </div>

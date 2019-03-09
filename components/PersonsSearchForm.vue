@@ -1,18 +1,17 @@
 <template>
   <div class="field has-text-centered">
-    <div class="control has-text-centered">
-      <label
-        for="search"
-        class="label"
-      >Cherchez par domaine (site web, application mobile, boutique...) ou technologie (React, WordPress, Java, PHP ... )</label>
+    <p class="control has-icons-left">
       <input
+        aria-label="Rechercher un développeur par mot-clef"
         id="search"
-        class="input is-large"
+        class="input is-medium is-flat"
         :value="value"
         @input="$emit('input', $event.target.value)"
         type="text"
-      >
-    </div>
+        placeholder="Site, Boutique, Application mobile, React, WordPress, Java, PHP ..."
+      />
+      <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+    </p>
   </div>
 </template>
 
@@ -28,7 +27,9 @@ export default {
 </script>
 
 <style scoped>
-input {
-  max-width: 400px;
+p.control {
+  display: inline-block;
+  width: 100%;
+  max-width: 900px;
 }
 </style>
