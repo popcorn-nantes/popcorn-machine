@@ -39,6 +39,7 @@ main .content a:not(.button) {
 
 .modal-content {
   width: 95%;
+  max-width: 640px;
 }
 
 .button.is-warning,
