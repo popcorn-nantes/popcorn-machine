@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <div style="margin-top:2rem" class="container has-text-centered">
       <h1 class="title">{{title}}</h1>
       <h2 class="subtitle">
@@ -14,7 +14,7 @@
         <Persons :persons="persons"/>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
