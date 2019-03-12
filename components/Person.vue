@@ -23,8 +23,10 @@
               </h2>
             </div>
             <div class="column has-text-right-desktop">
-              <button class="button is-warning" @click="showModal = true">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
+              <button class="button is-warning" @click="openModal">
+                <span class="icon">
+                  <i class="fas fa-envelope"></i>
+                </span>
                 <span>Proposer un projet</span>
               </button>
             </div>
@@ -34,44 +36,34 @@
         </div>
       </div>
     </div>
-    <div v-if="showModal" class="modal" :class="{ 'is-active': showModal }">
-      <div class="modal-background" @click="showModal = false"></div>
-      <div class="modal-content has-text-centered">
-        <div class="box">
-          <h1 class="title">Contacter {{ person.prenom }} {{ person.nom }}</h1>
-          <h2 class="subtitle">{{ person.titre }}</h2>
-          <p style="margin-top:1rem" class="is-size-5">{{ person.mail }}</p>
-          <p
-            v-show="person.telephone"
-            style="margin-top:1rem"
-            class="is-size-5"
-          >
-            {{ person.telephone }}
-          </p>
-          <p style="margin-top:2rem">
-            <em>Indiquez-lui que vous l'avez trouvé·e sur Popcorn :)</em>
-          </p>
-          <div style="font-size:3rem">🍿</div>
-        </div>
-        <!-- Any other Bulma elements you want -->
-      </div>
-      <button
-        @click="showModal = false"
-        class="modal-close is-large"
-        aria-label="fermer"
-      ></button>
-    </div>
+
+    <Modal id="contact-person" @modal="assignModal">
+      <h1 class="title" slot="title">
+        Contacter {{ person.prenom }} {{ person.nom }}
+      </h1>
+      <h2 class="subtitle">{{ person.titre }}</h2>
+      <p style="margin-top:1rem" class="is-size-5">{{ person.mail }}</p>
+      <p v-show="person.telephone" style="margin-top:1rem" class="is-size-5">
+        {{ person.telephone }}
+      </p>
+      <p style="margin-top:2rem">
+        <em>Indiquez-lui que vous l'avez trouvé·e sur Popcorn :)</em>
+      </p>
+      <div style="font-size:3rem">🍿</div>
+    </Modal>
   </div>
 </template>
 
 <script>
 import Tags from './Tags'
 import PhotoCard from './PhotoCard'
+import Modal from './Modal'
 
 export default {
   components: {
     Tags,
-    PhotoCard
+    PhotoCard,
+    Modal
   },
   props: {
     person: {
@@ -81,7 +73,17 @@ export default {
   },
   data() {
     return {
-      showModal: false
+      modal: null
+    }
+  },
+  methods: {
+    openModal() {
+      if (this.modal) {
+        this.modal.open()
+      }
+    },
+    assignModal(modal) {
+      this.modal = modal
     }
   }
 }

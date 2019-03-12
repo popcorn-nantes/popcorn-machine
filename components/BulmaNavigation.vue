@@ -5,12 +5,12 @@
         <div class="navbar-brand">
           <span class="navbar-item">
             <strong>
-              <nuxt-link class="has-text-dark is-size-4" to="/"
-                >POPCORN 🍿
-                <span class="navbar-location is-size-6">{{
-                  location
-                }}</span></nuxt-link
-              >
+              <nuxt-link class="has-text-dark is-size-4" to="/">
+                POPCORN 🍿
+                <span class="navbar-location is-size-6">
+                  {{ location }}
+                </span>
+              </nuxt-link>
             </strong>
           </span>
           <div
@@ -60,45 +60,47 @@
               >
             </span>
             <div class="navbar-item">
-              <div class="button is-dark" @click="showModal = true">
-                Contact
-              </div>
+              <button class="button is-dark" @click="openModal">Contact</button>
             </div>
           </div>
         </div>
       </div>
     </nav>
     <div class="container">
-      <div v-if="showModal" class="modal" :class="{ 'is-active': showModal }">
-        <div class="modal-background" @click="showModal = false"></div>
-        <div class="modal-content has-text-centered">
-          <div class="box">
-            <PopcornContact />
-          </div>
-        </div>
-        <button
-          @click="showModal = false"
-          class="modal-close is-large"
-          aria-label="fermer"
-        ></button>
-      </div>
+      <Modal id="contact" @modal="assignModal">
+        <h1 class="title" slot="title">Contact</h1>
+        <PopcornContact />
+      </Modal>
     </div>
   </header>
 </template>
 
 <script>
 import PopcornContact from '../components/PopcornContact'
+import Modal from '../components/Modal'
+
 export default {
   components: {
-    PopcornContact
+    PopcornContact,
+    Modal
   },
   computed: {
     location: () => process.env.POPCORN_LOCATION
   },
   data() {
     return {
-      showModal: false,
+      modal: null,
       showOnMobile: false
+    }
+  },
+  methods: {
+    openModal() {
+      if (this.modal) {
+        this.modal.open()
+      }
+    },
+    assignModal(modal) {
+      this.modal = modal
     }
   }
 }
