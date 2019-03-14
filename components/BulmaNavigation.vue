@@ -67,7 +67,7 @@
       </div>
     </nav>
     <div class="container">
-      <Modal id="contact" @modal="assignModal">
+      <Modal id="contact" ref="modal">
         <h1 class="title" slot="title">Contact</h1>
         <PopcornContact />
       </Modal>
@@ -89,18 +89,12 @@ export default {
   },
   data() {
     return {
-      modal: null,
       showOnMobile: false
     }
   },
   methods: {
     openModal() {
-      if (this.modal) {
-        this.modal.open()
-      }
-    },
-    assignModal(modal) {
-      this.modal = modal
+      this.$refs.modal.open()
     }
   }
 }

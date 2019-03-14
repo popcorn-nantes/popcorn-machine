@@ -44,14 +44,6 @@ export default {
     open() {
       MicroModal.show(this.id)
     }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.$emit('modal', this)
-    })
-  },
-  destroyed() {
-    this.$emit('modal')
   }
 }
 </script>

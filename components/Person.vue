@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <Modal id="contact-person" @modal="assignModal">
+    <Modal id="contact-person" ref="modal">
       <h1 class="title" slot="title">
         Contacter {{ person.prenom }} {{ person.nom }}
       </h1>
@@ -71,19 +71,9 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      modal: null
-    }
-  },
   methods: {
     openModal() {
-      if (this.modal) {
-        this.modal.open()
-      }
-    },
-    assignModal(modal) {
-      this.modal = modal
+      this.$refs.modal.open()
     }
   }
 }
