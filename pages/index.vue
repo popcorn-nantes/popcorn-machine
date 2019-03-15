@@ -1,6 +1,5 @@
 <template>
   <main>
-
     <section class="hero has-text-centered">
       <div class="hero-body">
         <div class="container">
@@ -13,8 +12,8 @@
     <section class="section">
       <div class="container">
         <PersonsSearchForm
-            :value="$store.state.currentSearch"
-            @input="onInput"
+          :value="$store.state.currentSearch"
+          @input="onInput"
         />
         <Persons :persons="persons" />
       </div>
@@ -81,7 +80,7 @@ export default {
 </script>
 
 <style scoped>
-  .hero-body {
-    padding-bottom: 0;
-  }
+.hero-body {
+  padding-bottom: 0;
+}
 </style>

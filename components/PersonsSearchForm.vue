@@ -27,9 +27,9 @@ export default {
 </script>
 
 <style scoped>
-  div.field {
-    padding-bottom: 3rem;
-  }
+div.field {
+  padding-bottom: 3rem;
+}
 p.control {
   display: inline-block;
   width: 100%;
