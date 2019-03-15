@@ -39,7 +39,7 @@ L'idée expérimentée par _Popcorn_ est d'avoir un site aussi léger techniquem
 - On veut bien être hébergé pour 0 euros chez Github ^^
 - On veut bien un site qui soit capable de supporter un fort pic de charge sans broncher : évitons le cas du site qui tombe pile au moment où un article de presse le mentionne 😅
 - On veut bien un moteur de recherche super-rapide et un site qui s'affiche super vite
-- On veut bien que des gens puissent tout simplement forker ce dépôt pour créer leur propre annuaire 💚
+- On veut bien que des gens puissent tout simplement forker [le repo de démarrage](https://github.com/popcorn-nantes/popcorn-starter) pour créer leur propre annuaire 💚
 
 ## DOCUMENTATION TECHNIQUE
 

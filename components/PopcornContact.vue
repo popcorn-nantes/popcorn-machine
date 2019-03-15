@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="title">Contact</h1>
     <h2
       v-if="
         requestStatus !== 'FINISHED_ERROR' && requestStatus !== 'FINISHED_OK'
