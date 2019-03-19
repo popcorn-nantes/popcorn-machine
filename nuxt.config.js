@@ -61,8 +61,12 @@ module.exports = {
   modules: [
     ['@nuxtjs/dotenv', { path: POPCORN_DIR }],
     'nuxt-gustave',
+    'nuxt-purgecss',
     '~/modules/copyPublic.js'
   ],
+  purgeCSS: {
+    mode: 'postcss'
+  },
   gustave: {
     JSONDirectory: popcorn.dirApiPath,
     compilers: [
