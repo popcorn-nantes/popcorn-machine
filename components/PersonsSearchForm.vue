@@ -9,7 +9,7 @@
             class="input is-medium is-flat"
             v-model="search"
             type="text"
-            placeholder="Site, Boutique, Application mobile, React, WordPress, Java, PHP ..."
+            placeholder="Site, Boutique, Application, React, WordPress, Java, PHP ..."
           />
           <span class="icon is-small is-left">
             <i class="fas fa-search"></i>
@@ -19,7 +19,7 @@
           <input
             value="Rechercher"
             type="submit"
-            class="button is-info is-medium"
+            class="button is-warning is-medium"
           />
         </div>
       </div>
@@ -36,8 +36,14 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$store.commit('setCurrentSearch', this.search)
       this.$emit('onSubmit', this.search)
+    }
+  },
+  created() {
+    // si on vient d'une autre page, filtrer les profils en fonction
+    // de la recherche en cours, si il y en a une.
+    if (this.$store.state.currentSearch.trim()) {
+      this.search = this.$store.state.currentSearch.trim()
     }
   }
 }

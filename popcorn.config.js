@@ -15,6 +15,7 @@ const slogan = `Trouvez un développeur freelance ${
 
 module.exports = {
   location: config.location,
+  matomo: config.matomo ? config.matomo : null,
 
   title,
   subtitle,

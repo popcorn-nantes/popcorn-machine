@@ -41,6 +41,11 @@ export default {
   methods: {
     onSearchSubmit(value) {
       this.persons = this.filterPersons(value)
+      this.$store.commit('setCurrentSearch', value)
+      this.$router.push({
+        path: '/',
+        query: { ...this.$route.query, search: value }
+      })
     },
     filterPersons(text) {
       let persons = getPersons().filter(person => {
