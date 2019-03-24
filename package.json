@@ -17,17 +17,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,vue,json,css,!.min.css,md}": [
-      "node_modules/.bin/prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
     "*.{js,vue,json,css,md}": [
       "prettier --write",
       "git add"
@@ -47,6 +36,7 @@
     "nodemon": "^1.18.7",
     "nuxt": "^2.3.4",
     "nuxt-gustave": "^0.5.2",
+    "nuxt-matomo": "^1.2.2",
     "serve": "^10.1.1",
     "vue-lazyload": "^1.2.6"
   },

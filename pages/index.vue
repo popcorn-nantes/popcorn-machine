@@ -11,10 +11,7 @@
 
     <section class="section">
       <div class="container">
-        <PersonsSearchForm
-          :value="$store.state.currentSearch"
-          @input="onInput"
-        />
+        <PersonsSearchForm @onSubmit="onSearchSubmit" />
         <Persons :persons="persons" />
       </div>
     </section>
@@ -42,8 +39,7 @@ export default {
     subtitle: () => process.env.POPCORN_SUBTITLE
   },
   methods: {
-    onInput(value) {
-      this.$store.commit('setCurrentSearch', value)
+    onSearchSubmit(value) {
       this.persons = this.filterPersons(value)
     },
     filterPersons(text) {
