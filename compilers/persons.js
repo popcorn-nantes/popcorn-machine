@@ -15,8 +15,7 @@ exports.compile = () => {
     $search_keywords: [
       ...resource.domaines_metiers,
       ...resource.technologies,
-      resource.titre,
-      resource.prenom + ' ' + resource.nom
+      resource.titre
     ]
   }))
 
