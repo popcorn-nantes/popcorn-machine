@@ -1,4 +1,4 @@
-// POPCORN_DIR est le chemin absolu vers l'instance de Popcorn courante.
+// POPCORN_DIR est le chemin absolu vers l'instance de la localité.
 const { POPCORN_BASE_URL, POPCORN_DIR } = process.env
 const path = require('path')
 let config = require(POPCORN_DIR + '/popcorn.config')
@@ -15,6 +15,7 @@ const slogan = `Trouvez un développeur freelance ${
 
 module.exports = {
   location: config.location,
+  matomo: config.matomo ? config.matomo : null,
 
   title,
   subtitle,

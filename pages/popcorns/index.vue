@@ -1,6 +1,5 @@
 <template>
   <main>
-
     <section class="hero has-text-centered">
       <div class="hero-body">
         <div class="container">
@@ -16,9 +15,13 @@
 
     <div class="section">
       <div class="container">
-        <BulmaGrid :items="popcorns" itemsByRow="3" :itemKey="popcorn => popcorn.$slug">
-          <template slot-scope="{item}">
-            <PopcornCard :popcorn="item"/>
+        <BulmaGrid
+          :items="popcorns"
+          itemsByRow="3"
+          :itemKey="popcorn => popcorn.$slug"
+        >
+          <template slot-scope="{ item }">
+            <PopcornCard :popcorn="item" />
           </template>
         </BulmaGrid>
       </div>

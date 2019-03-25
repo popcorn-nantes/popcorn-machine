@@ -16,6 +16,7 @@ La machine à Popcorn permet de créer son propre "Popcorn" : un annuaire local 
 - SEO-friendly avec la prégénération du html et les tags pour les réseaux sociaux (Facebook, Twitter, Linkedin)
 - Support Gravatar pour les photos du profil
 - Un formulaire de contact qui envoie le message sur le channel #general d'un Slack
+- Statistiques avec [Matomo](https://matomo.org/) (requiert d'avoir une instance de Matomo)
 - Une page qui affichent tous les autres popcorns francophones
 
 ## Ajouter son Popcorn dans l'annuaire des Popcorns
@@ -24,6 +25,23 @@ La machine à Popcorn permet de créer son propre "Popcorn" : un annuaire local 
 - crée ta fiche Popcorn dans `content/popcorns`
 - Choisis une belle image qui symbolise bien d'après toi la localité de ton Popcorn et met là dans le dossier `/static/images/`. Attention ! L'image doit faire 100ko maximum
 - Soumettre ta pull request ! Ton popcorn apparaitra dans la page "Annuaire des Popcorns" de tous les Popcorns dès qu'ils auront mis à jour leur version de `popcorn-machine`.
+
+## Brancher les statistiques de Matomo
+
+Il suffit de renseigner dans le `popcorn.config.js` les paramètres de votre [Matomo](https://matomo.org/)
+
+```js
+module.exports = {
+  location: 'à Nantes',
+  // statistiques
+  matomo: {
+    matomoUrl: 'https://xxx.xxx.xx/', // notez le slash final
+    siteId: 1,
+    debug: false,
+    verbose: false
+  }
+}
+```
 
 ## PHILOSOPHIE TECHNIQUE : 0 MAINTENANCE, 0 FRAIS, SIMPLE ET EFFICACE
 
