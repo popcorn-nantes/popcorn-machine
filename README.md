@@ -35,7 +35,7 @@ module.exports = {
   location: 'à Nantes',
   // statistiques
   matomo: {
-    matomoUrl: 'https://xxx.xxx.xx',
+    matomoUrl: 'https://xxx.xxx.xx/', // notez le slash final
     siteId: 1,
     debug: false,
     verbose: false
