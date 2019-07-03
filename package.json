@@ -1,6 +1,6 @@
 {
   "name": "popcorn-machine",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "popcorn machine",
   "license": "MIT",
   "bin": {
