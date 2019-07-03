@@ -2,7 +2,7 @@
   <main>
     <div class="section">
       <div class="container">
-        <Person v-if="person" :person="person" />
+        <Person v-if="person" :person="person"/>
         <div v-else>Désolé, cette page n'existe pas ou a été dépubliée. 😭</div>
       </div>
     </div>
